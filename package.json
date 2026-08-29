@@ -1,0 +1,21 @@
+{
+  "name": "vela-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:private": "npm run dev -w @vela/private",
+    "dev:aviation": "npm run dev -w @vela/aviation",
+    "dev:concierge": "npm run dev -w @vela/concierge",
+    "build:private": "npm run build -w @vela/private",
+    "build:aviation": "npm run build -w @vela/aviation",
+    "build:concierge": "npm run build -w @vela/concierge",
+    "build": "npm run build:private && npm run build:aviation && npm run build:concierge",
+    "lint": "npm run lint -w @vela/private && npm run lint -w @vela/aviation && npm run lint -w @vela/concierge"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

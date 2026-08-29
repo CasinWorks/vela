@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080B0E;
+    color: #E2E8F0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-display-luxury {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-sans-luxury {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Fluid page shell — scales padding on ultrawide instead of a hard 1720 cap */
+.site-shell {
+  width: 100%;
+  max-width: min(100%, 2400px);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 3.5vw, 4rem);
+}
+
+@media (min-width: 1600px) {
+  .site-shell {
+    padding-inline: clamp(2rem, 5vw, 6rem);
+  }
+}
+
+@media (min-width: 2000px) {
+  .site-shell {
+    max-width: min(100%, 2800px);
+    padding-inline: clamp(3rem, 7vw, 9rem);
+  }
+}
+
+.site-shell-flush {
+  width: 100%;
+  max-width: min(100%, 2400px);
+  margin-inline: auto;
+}
+
+@media (min-width: 2000px) {
+  .site-shell-flush {
+    max-width: min(100%, 2800px);
+  }
+}
+
+/* Custom Gold and Basalt Gradient Accents */
+.gold-glow {
+  box-shadow: 0 0 35px -10px rgba(197, 168, 128, 0.25);
+}
+
+.gold-border-glow {
+  border-color: rgba(197, 168, 128, 0.4);
+  box-shadow: 0 0 20px -5px rgba(197, 168, 128, 0.2);
+}
+
+.glass-panel {
+  background: rgba(15, 20, 27, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 168, 128, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(197, 168, 128, 0.15);
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080B0E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252D37;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}
+
