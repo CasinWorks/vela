@@ -57,8 +57,8 @@ export const IcelandLimousineView: React.FC<IcelandLimousineViewProps> = ({
       <section className="relative min-h-[85vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=2000&q=80" 
-            alt="Luxury Range Rover in Iceland volcanic landscape" 
+            src="https://images.unsplash.com/photo-1549632891-a0bea6d0355b?auto=format&fit=crop&w=2000&q=80" 
+            alt="Range Rover on a highland track" 
             className="w-full h-full object-cover object-center opacity-40 scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#080B0E] via-[#080B0E]/80 to-[#080B0E]/90" />

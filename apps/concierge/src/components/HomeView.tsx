@@ -39,7 +39,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
         >
           <img
             src={HERO_IMG}
-            alt="Luxury chauffeur SUV"
+            alt="Range Rover chauffeur SUV"
             className="w-full h-full object-cover object-[62%_center] sm:object-[68%_center] brightness-[0.75]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#080B0E] via-[#080B0E]/75 to-transparent w-full md:w-[70%] lg:w-[58%] xl:w-[50%]" />
@@ -62,7 +62,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
             </motion.h1>
             <motion.p variants={heroReveal} className="text-slate-300 text-sm sm:text-base min-[1800px]:text-lg font-light max-w-lg min-[1800px]:max-w-xl leading-relaxed">
               Experience Iceland in style and comfort. Private car and chauffeur with our
-              Mercedes-Benz GLS (up to 6 passengers) and Range Rover (up to 4 passengers).
+              Mercedes-Benz GLE (up to 6 passengers) and Range Rover (up to 4 passengers).
             </motion.p>
             <motion.div variants={heroReveal} className="pt-2 flex flex-wrap items-center gap-4">
               <motion.button
@@ -154,7 +154,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
                 Two vehicles. Absolute focus.
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Our current operational fleet: the Mercedes-Benz GLS (up to 6 passengers) and the Range
+                Our current operational fleet: the Mercedes-Benz GLE (up to 6 passengers) and the Range
                 Rover (up to 4 passengers).
               </p>
             </div>

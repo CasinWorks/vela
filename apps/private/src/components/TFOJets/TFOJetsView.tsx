@@ -49,8 +49,8 @@ export const VELAJetsView: React.FC<VELAJetsViewProps> = ({
       <section className="relative min-h-[85vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=2000&q=85" 
-            alt="Vela Aviation Private Aviation Fleet" 
+            src="https://images.unsplash.com/photo-1684838200888-192e2a163cc9?auto=format&fit=crop&w=2000&q=85" 
+            alt="Gulfstream business jet on the apron" 
             className="w-full h-full object-cover object-center opacity-40 scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#080B0E] via-[#080B0E]/85 to-[#080B0E]/90" />

@@ -40,20 +40,24 @@ export interface IcelandTour {
 const unsplash = (id: string) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1600&q=80`;
 
-/** Studio-concept luxury fleet — stock photography only */
+/**
+ * Studio-concept luxury fleet — Unsplash stock, visually matched to the name.
+ * GLE: photo-1583918003285 (Mercedes-Benz GLE, not GLS — Unsplash has no clear GLS exterior).
+ * Range Rover: photo-1549632891 (RANGE ROVER lettering on the bonnet).
+ */
 export const GROUND_FLEET: GroundVehicle[] = [
   {
-    id: 'mercedes-gls',
-    name: 'Mercedes-Benz GLS',
+    id: 'mercedes-gle',
+    name: 'Mercedes-Benz GLE',
     category: 'Luxury SUV',
     passengers: 6,
     luggage: 5,
-    image: unsplash('photo-1618843479313-40f8aa3b3032'),
+    image: unsplash('photo-1583918003285-199304164a2f'),
     hourlyRateEUR: 170,
     transferRateKEF_EUR: 200,
     tag: 'Flagship Chauffeur',
     description:
-      'Executive three-row luxury for VIP transfers and private touring. Configured for up to six passengers with a quiet cabin and all-weather confidence.',
+      'Executive luxury SUV for VIP transfers and private touring. Configured for up to six passengers with a quiet cabin and all-weather confidence.',
     features: [
       'Up to 6 passengers',
       'Heated leather seating',
@@ -74,7 +78,7 @@ export const GROUND_FLEET: GroundVehicle[] = [
     category: 'Premium 4x4',
     passengers: 4,
     luggage: 4,
-    image: unsplash('photo-1503376780353-7e6692767b70'),
+    image: unsplash('photo-1549632891-a0bea6d0355b'),
     hourlyRateEUR: 190,
     transferRateKEF_EUR: 200,
     tag: 'All-Terrain',
@@ -106,7 +110,7 @@ export const ICELAND_TOURS: IcelandTour[] = [
     basePrice: 2100,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1504893524553-b855bce32c67'),
+    image: unsplash('photo-1768078557772-79741862c07d'),
     description:
       'We will visit the lagoon Jökulsárlón where a glacier calves into the lake. It is possible to sail around the glaciers and taste 1000-year-old Icelandic water. A few metres away is the famous Diamond Beach.',
     highlights: [
@@ -123,7 +127,7 @@ export const ICELAND_TOURS: IcelandTour[] = [
     basePrice: 1800,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1476610182048-b716b8518aae'),
+    image: unsplash('photo-1532589210287-59c140e08695'),
     description:
       'Seljalandsfoss, Skógafoss, Sólheimajökull, Vík, Black Beach, and Dyrhólaey when open. Come with us for a tour through the amazing landscape of the South Coast of Iceland.',
     highlights: [
@@ -140,7 +144,7 @@ export const ICELAND_TOURS: IcelandTour[] = [
     basePrice: 1500,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1464822759023-fed622ff2c3b'),
+    image: unsplash('photo-1559510980-2491b1b9f875'),
     description:
       'In Þingvellir you will enjoy beautiful landscape while listening to the great history of the place. From there we go to the boiling Geysir and the powerful waterfall Gullfoss.',
     highlights: [
@@ -157,7 +161,7 @@ export const ICELAND_TOURS: IcelandTour[] = [
     basePrice: 2000,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1507272931001-fc06c17e4f43'),
+    image: unsplash('photo-1635783651424-c7a21cd71549'),
     description:
       'Westman Islands are islands off the South Coast of Iceland. On one of them is a little and beautiful town of 4–5 thousand inhabitants. Incredible nature and big history touch everyone who goes there. We will sail out by ferry.',
     highlights: [
@@ -219,10 +223,12 @@ export const AIRPORT_TRANSFER = {
   fromEUR: 200,
   maxPassengers: 4,
   route: 'KEF ↔ Reykjavík',
-  image: unsplash('photo-1485291571150-772bcfc10da1'),
+  image: unsplash('photo-1485291571150-772bcfc10da5'),
 };
 
 export const STOCK = {
-  hero: unsplash('photo-1492144534655-ae79c964c9d7'),
-  cta: unsplash('photo-1419242902214-272b3f66ee7a'),
+  /** Range Rover, side profile */
+  hero: unsplash('photo-1563458563737-e60b1f1b345f'),
+  /** Aurora over snow — Iceland night */
+  cta: unsplash('photo-1531366936337-7c912a4589a7'),
 };

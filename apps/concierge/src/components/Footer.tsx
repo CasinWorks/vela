@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
             <p className="text-xs leading-relaxed max-w-sm">
               Private chauffeur, KEF transfers and bespoke Iceland tours — a specialist division of Vela Private.
-              Current fleet: Mercedes-Benz GLS and Range Rover.
+              Current fleet: Mercedes-Benz GLE and Range Rover.
             </p>
             <div className="flex flex-col gap-2 pt-2 text-xs">
               <SiteNavLinks variant="footer" />

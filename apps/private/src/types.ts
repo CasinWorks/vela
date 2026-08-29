@@ -5,7 +5,7 @@ export type Currency = 'USD' | 'EUR' | 'ISK' | 'GBP';
 export interface GroundVehicle {
   id: string;
   name: string;
-  category: 'First Class Sedan' | 'Executive MPV' | 'Luxury 4x4 SUV' | 'VIP Sprinter Lounge' | 'Arctic Spec Super Jeep';
+  category: 'First Class Sedan' | 'Executive MPV' | 'Luxury SUV' | 'Luxury 4x4 SUV';
   passengers: number;
   luggage: number;
   image: string;

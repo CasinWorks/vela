@@ -153,7 +153,7 @@ export const HomeView: React.FC = () => {
               <div className="relative w-full max-w-lg overflow-hidden aspect-[4/5] max-h-[480px]">
                 <img
                   src={IMAGES.specialty}
-                  alt="Sunset from the flight deck"
+                  alt="Business jet at sunrise"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
@@ -224,7 +224,7 @@ export const HomeView: React.FC = () => {
             >
               <img
                 src={IMAGES.crew}
-                alt="Vela Aviation flight crew in the cockpit"
+                alt="Aircraft boarding on the tarmac"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080B0E] via-[#080B0E]/55 to-transparent" />

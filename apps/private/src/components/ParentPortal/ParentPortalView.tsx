@@ -18,14 +18,14 @@ const stock = (id: string, w = 1800) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 const STOCK = {
-  hero: stock('photo-1569629743817-70d8db6c323b', 2400),
-  aviationCard: stock('photo-1474303333531-939da2e6ca31', 1600),
-  conciergeCard: stock('photo-1485291571150-772bcfc10da1', 1600),
-  chauffeur: stock('photo-1449965408869-eaa3f722f40d', 1200),
-  iceland: stock('photo-1504893524553-b855bce32c67', 1200),
-  aviationJourney: stock('photo-1436491865332-7a61a109cc05', 1200),
-  vipArrival: stock('photo-1529074963764-98f45c47344b', 1200),
-  cta: stock('photo-1507272931001-fc06c17e4f43', 2400),
+  hero: stock('photo-1684838200888-192e2a163cc9', 2400),
+  aviationCard: stock('photo-1684838200815-36eef38f353c', 1600),
+  conciergeCard: stock('photo-1563458563737-e60b1f1b345f', 1600),
+  chauffeur: stock('photo-1583918003285-199304164a2f', 1200),
+  iceland: stock('photo-1768078557772-79741862c07d', 1200),
+  aviationJourney: stock('photo-1540962351504-03099e0a754b', 1200),
+  vipArrival: stock('photo-1693835195915-b30cc5ae885c', 1200),
+  cta: stock('photo-1635783651424-c7a21cd71549', 2400),
 };
 
 interface ParentPortalViewProps {
@@ -57,7 +57,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
         >
           <img 
             src={STOCK.hero} 
-            alt="Private Aviation & Luxury Travel Runway" 
+            alt="Gulfstream business jet on the apron" 
             className="w-full h-full object-cover object-right md:object-center brightness-[0.80]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#080B0E]/90 via-[#080B0E]/60 to-transparent w-full md:w-3/4" />
@@ -170,7 +170,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
                 <div className="w-full h-full overflow-hidden">
                   <img 
                     src={STOCK.aviationCard} 
-                    alt="Vela Aviation Private Aviation"
+                    alt="Gulfstream business jet on the taxiway"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -215,7 +215,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
                 <div className="w-full h-full overflow-hidden">
                   <img 
                     src={STOCK.conciergeCard} 
-                    alt="Vela Concierge Luxury Fleet on Road"
+                    alt="Range Rover chauffeur SUV"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -277,7 +277,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
                 <div className="w-full h-full overflow-hidden">
                   <img 
                     src={STOCK.chauffeur} 
-                    alt="Private Chauffeur Luxury Interior"
+                    alt="Mercedes-Benz GLE chauffeur SUV"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -306,7 +306,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
                 <div className="w-full h-full overflow-hidden">
                   <img 
                     src={STOCK.iceland} 
-                    alt="Bespoke Iceland Glacier Lagoon"
+                    alt="Icebergs at Jökulsárlón glacier lagoon, Iceland"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -335,7 +335,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
                 <div className="w-full h-full overflow-hidden">
                   <img 
                     src={STOCK.aviationJourney} 
-                    alt="Private Jet Aviation Services"
+                    alt="Dassault Falcon 900 private jet"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -364,7 +364,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
                 <div className="w-full h-full overflow-hidden">
                   <img 
                     src={STOCK.vipArrival} 
-                    alt="VIP Arrival Lounge Terminal"
+                    alt="Pilatus PC-12 ready in the hangar"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -394,7 +394,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
         <div className="absolute inset-0 z-0">
           <img 
             src={STOCK.cta} 
-            alt="Atmospheric Journey Horizon"
+            alt="Sea cliffs in Vestmannaeyjar, Iceland"
             className="w-full h-full object-cover brightness-60 contrast-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B0E] via-[#080B0E]/60 to-[#080B0E]" />
