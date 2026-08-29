@@ -12,7 +12,7 @@ import {
   PlaneLanding,
   MapPin,
 } from 'lucide-react';
-import { GROUND_FLEET, ICELAND_TOURS, AIRPORT_TRANSFER, formatMoney, STOCK } from '../data/fleet';
+import { GROUND_FLEET, PRIVATE_TOURS, AIRPORT_TRANSFER, formatMoney, STOCK } from '../data/fleet';
 import { EcosystemBand } from './EcosystemBand';
 import { fadeUp, easeLuxury, staggerContainer, heroReveal } from '../lib/motion';
 
@@ -61,7 +61,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
               <span className="text-[#C5A880] font-light">Private Chauffeur</span>
             </motion.h1>
             <motion.p variants={heroReveal} className="text-slate-300 text-sm sm:text-base min-[1800px]:text-lg font-light max-w-lg min-[1800px]:max-w-xl leading-relaxed">
-              Experience Iceland in style and comfort. Private car and chauffeur with our
+              Experience the Philippines in style and comfort. Private car and chauffeur with our
               Mercedes-Benz GLE (up to 6 passengers) and Range Rover (up to 4 passengers).
             </motion.p>
             <motion.div variants={heroReveal} className="pt-2 flex flex-wrap items-center gap-4">
@@ -90,7 +90,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
                 <CheckCircle className="w-4 h-4 text-[#C5A880]" /> English-Speaking Chauffeurs
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-[#C5A880]" /> KEF VIP Transfers
+                <CheckCircle className="w-4 h-4 text-[#C5A880]" /> NAIA VIP Transfers
               </span>
             </motion.div>
           </motion.div>
@@ -122,7 +122,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
               {
                 icon: MapPin,
                 title: 'Bespoke Day Tours',
-                body: 'Golden Circle, South Coast, Jökulsárlón, Westman Islands, aurora — designed around you.',
+                body: 'El Nido, Bohol, Tagaytay & Taal, Banaue rice terraces, Intramuros — designed around you.',
               },
             ].map((item, i) => (
               <motion.div
@@ -219,7 +219,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
 
                   <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
                     <div>
-                      <span className="text-[10px] text-slate-500 block">KEF transfer · hourly</span>
+                      <span className="text-[10px] text-slate-500 block">NAIA transfer · hourly</span>
                       <span className="text-sm font-semibold text-[#0F172A]">
                         {formatMoney(vehicle.transferRateKEF_EUR)} · {formatMoney(vehicle.hourlyRateEUR)}/hr
                       </span>
@@ -250,7 +250,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
-            {ICELAND_TOURS.map((tour, i) => (
+            {PRIVATE_TOURS.map((tour, i) => (
               <motion.div
                 key={tour.id}
                 {...fadeUp}
@@ -339,7 +339,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
               <div className="pt-3 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <span className="text-[10px] tracking-[0.18em] uppercase text-slate-500 block mb-1">
-                    To / from Reykjavík
+                    To / from Makati
                   </span>
                   <span className="text-lg font-semibold text-[#C5A880]">
                     from {formatMoney(AIRPORT_TRANSFER.fromEUR)}
@@ -364,7 +364,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
         <div className="absolute inset-0 z-0">
           <img
             src={STOCK.cta}
-            alt="Iceland landscape"
+            alt="El Nido coastline, Palawan"
             className="w-full h-full object-cover brightness-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B0E] via-[#080B0E]/60 to-[#080B0E]" />
@@ -372,7 +372,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
         <motion.div {...fadeUp} className="relative z-10 site-shell">
           <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="font-serif-luxury text-4xl sm:text-5xl font-normal text-white">
-            Your Iceland journey, perfectly managed.
+            Your Philippine journey, perfectly managed.
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm font-light max-w-lg mx-auto leading-relaxed">
             Airport transfers from {formatMoney(AIRPORT_TRANSFER.fromEUR)} (up to {AIRPORT_TRANSFER.maxPassengers}{' '}

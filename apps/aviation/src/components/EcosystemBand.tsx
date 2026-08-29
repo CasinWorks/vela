@@ -15,10 +15,10 @@ export const EcosystemBand: React.FC = () => (
           Vela Private · Ground division
         </span>
         <h2 className="font-serif-luxury text-2xl sm:text-3xl text-white leading-snug">
-          Secure a private chauffeur in Iceland
+          Secure a private chauffeur in the Philippines
         </h2>
         <p className="text-sm text-slate-400 leading-relaxed">
-          KEF airport transfers, signature day tours, and wedding chauffeur — managed by Vela Concierge,
+          NAIA airport transfers, signature day tours, and wedding chauffeur — managed by Vela Concierge,
           part of the Vela Private ecosystem.
         </p>
       </div>

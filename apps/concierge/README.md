@@ -4,7 +4,7 @@ Luxury ground transportation sibling site for the **Vela Private** studio concep
 
 ## Current fleet (concept)
 
-- **Mercedes-Benz GLS** — max 6 passengers
+- **Mercedes-Benz GLE** — max 6 passengers
 - **Range Rover** — max 4 passengers
 
 ## Local development

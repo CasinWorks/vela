@@ -10,7 +10,7 @@ import {
   MapPin,
   Users,
 } from 'lucide-react';
-import { GROUND_FLEET, ICELAND_TOURS, AIRPORT_TRANSFER, formatMoney } from '../data/fleet';
+import { GROUND_FLEET, PRIVATE_TOURS, AIRPORT_TRANSFER, formatMoney } from '../data/fleet';
 import { addBooking, type ServiceType } from '../lib/bookings';
 import { notifyBookingByEmail } from '../lib/notifyBooking';
 import { easeLuxury, bookingPortal, pageSlide, stepStagger, stepChild } from '../lib/motion';
@@ -45,15 +45,15 @@ export const StoryBooking: React.FC<StoryBookingProps> = ({
   const [serviceType, setServiceType] = useState<ServiceType>(
     initialTourId ? 'day_tour' : 'airport_transfer'
   );
-  const [tourId, setTourId] = useState(initialTourId || ICELAND_TOURS[0].id);
+  const [tourId, setTourId] = useState(initialTourId || PRIVATE_TOURS[0].id);
   const [calMonth, setCalMonth] = useState(today.getMonth());
   const [calYear, setCalYear] = useState(today.getFullYear());
   const [date, setDate] = useState('');
   const [time, setTime] = useState('10:00');
   const [hoursNeeded, setHoursNeeded] = useState(4);
   const [passengers, setPassengers] = useState(2);
-  const [pickup, setPickup] = useState('Keflavík International Airport (KEF)');
-  const [dropoff, setDropoff] = useState('Reykjavík city centre');
+  const [pickup, setPickup] = useState('Ninoy Aquino International Airport (NAIA / MNL)');
+  const [dropoff, setDropoff] = useState('Makati CBD');
   const [guestName, setGuestName] = useState('');
   const [guestEmail, setGuestEmail] = useState('');
   const [guestPhone, setGuestPhone] = useState('');
@@ -64,7 +64,7 @@ export const StoryBooking: React.FC<StoryBookingProps> = ({
   const [submitting, setSubmitting] = useState(false);
 
   const vehicle = GROUND_FLEET.find((v) => v.id === vehicleId) || GROUND_FLEET[0];
-  const tour = ICELAND_TOURS.find((t) => t.id === tourId);
+  const tour = PRIVATE_TOURS.find((t) => t.id === tourId);
 
   const estimate = useMemo(() => {
     if (serviceType === 'airport_transfer') {
@@ -233,7 +233,7 @@ export const StoryBooking: React.FC<StoryBookingProps> = ({
                   Book your journey
                 </span>
                 <h1 className="font-serif-luxury text-4xl sm:text-5xl text-white leading-tight">
-                  Your Iceland story,<br />
+                  Your Philippine story,<br />
                   <span className="text-[#C5A880] font-light">one step at a time.</span>
                 </h1>
                 <p className="text-slate-400 text-sm leading-relaxed max-w-lg">
@@ -314,7 +314,7 @@ export const StoryBooking: React.FC<StoryBookingProps> = ({
                               <Users className="w-3.5 h-3.5 text-[#C5A880]" /> {v.passengers} pax
                             </span>
                             <span className="inline-flex items-center gap-1.5">
-                              <Car className="w-3.5 h-3.5 text-[#C5A880]" /> KEF from {formatMoney(v.transferRateKEF_EUR)}
+                              <Car className="w-3.5 h-3.5 text-[#C5A880]" /> NAIA from {formatMoney(v.transferRateKEF_EUR)}
                             </span>
                             <span className="inline-flex items-center gap-1.5">
                               <Clock className="w-3.5 h-3.5 text-[#C5A880]" /> {formatMoney(v.hourlyRateEUR)}/hr
@@ -353,7 +353,7 @@ export const StoryBooking: React.FC<StoryBookingProps> = ({
                     {
                       id: 'day_tour' as const,
                       title: 'Private day tour / special',
-                      blurb: 'Jökulsárlón, South Coast, Golden Circle, Westman Islands, aurora, wedding',
+                      blurb: 'El Nido, Bohol, Tagaytay & Taal, Banaue, Intramuros, wedding',
                     },
                   ] as const
                 ).map((s) => (
@@ -398,7 +398,7 @@ export const StoryBooking: React.FC<StoryBookingProps> = ({
               {serviceType === 'day_tour' && (
                 <motion.div variants={stepChild} className="space-y-3">
                   <label className="text-xs text-slate-400">Select tour</label>
-                  {ICELAND_TOURS.map((t) => (
+                  {PRIVATE_TOURS.map((t) => (
                     <button
                       key={t.id}
                       type="button"

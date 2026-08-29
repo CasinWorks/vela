@@ -17,7 +17,7 @@ type BookingPayload = {
   guestPhone: string;
   notes?: string;
   estimatedAmount: number;
-  estimateCurrency: 'EUR' | 'ISK';
+  estimateCurrency: 'EUR' | 'PHP' | 'ISK';
 };
 
 function parseRecipients(raw: string | undefined): string[] {
@@ -28,7 +28,8 @@ function parseRecipients(raw: string | undefined): string[] {
     .filter(Boolean);
 }
 
-function formatEstimate(amount: number, currency: 'EUR' | 'ISK') {
+function formatEstimate(amount: number, currency: 'EUR' | 'PHP' | 'ISK') {
+  if (currency === 'PHP') return `₱${amount.toLocaleString('en-PH')}`;
   if (currency === 'ISK') return `${amount.toLocaleString('is-IS')} ISK`;
   return `€${amount.toLocaleString()}`;
 }

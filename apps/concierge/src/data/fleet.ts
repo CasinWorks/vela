@@ -7,7 +7,7 @@ export interface GroundVehicle {
   image: string;
   /** Hourly chauffeur hire — from rate */
   hourlyRateEUR: number;
-  /** KEF ↔ Reykjavík private transfer — from rate */
+  /** NAIA (MNL) ↔ Manila / Makati private transfer — from rate */
   transferRateKEF_EUR: number;
   features: string[];
   specs: {
@@ -20,9 +20,9 @@ export interface GroundVehicle {
   description: string;
 }
 
-export type OfferCurrency = 'EUR' | 'ISK';
+export type OfferCurrency = 'EUR' | 'PHP';
 
-export interface IcelandTour {
+export interface PrivateTour {
   id: string;
   title: string;
   subtitle?: string;
@@ -83,7 +83,7 @@ export const GROUND_FLEET: GroundVehicle[] = [
     transferRateKEF_EUR: 200,
     tag: 'All-Terrain',
     description:
-      'High-clearance luxury for Iceland’s demanding roads — lava fields, highland approaches, and winter conditions — with executive comfort for up to four passengers.',
+      'High-clearance luxury for Philippine mountain roads — Tagaytay ridge, Cordillera approaches, and monsoon weather — with executive comfort for up to four passengers.',
     features: [
       'Up to 4 passengers',
       'Executive specification',
@@ -100,121 +100,131 @@ export const GROUND_FLEET: GroundVehicle[] = [
   },
 ];
 
-/** Studio-concept tours — destination photography is Unsplash stock */
-export const ICELAND_TOURS: IcelandTour[] = [
+/**
+ * Studio-concept tours — destination photography is Unsplash stock, matched to each label.
+ * El Nido lagoon: photo-1749995925383 · Bohol Chocolate Hills: photo-1757949640707
+ * Taal: photo-1760982228709 · Batad rice terraces: photo-1716863451357
+ * San Agustin, Intramuros: photo-1743309196261
+ */
+export const PRIVATE_TOURS: PrivateTour[] = [
   {
-    id: 'jokulsarlon-diamond-beach',
-    title: 'Jökulsárlón & Diamond Beach',
-    subtitle: 'Glacier lagoon',
+    id: 'el-nido-palawan',
+    title: 'El Nido & Hidden Lagoons',
+    subtitle: 'Palawan island day',
     durationHours: 10,
     basePrice: 2100,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1768078557772-79741862c07d'),
+    image: unsplash('photo-1749995925383-5195d00a6811'),
     description:
-      'We will visit the lagoon Jökulsárlón where a glacier calves into the lake. It is possible to sail around the glaciers and taste 1000-year-old Icelandic water. A few metres away is the famous Diamond Beach.',
+      'We will visit the limestone lagoons of El Nido, where karst cliffs rise from turquoise water. Island-hopping by private banca, hidden beaches, and time on the water — arranged around your pace.',
     highlights: [
-      'Jökulsárlón glacier lagoon',
-      'Optional lagoon boat sailing',
-      'Diamond Beach',
+      'Limestone lagoons of El Nido',
+      'Private banca island-hopping',
+      'Hidden beaches & snorkel stops',
     ],
+    note: 'Air transfer to Palawan arranged separately — chauffeur meets you on the ground.',
   },
   {
-    id: 'vik-reynisdrangar',
-    title: 'Vík Reynisdrangar',
-    subtitle: 'South Coast Adventure',
+    id: 'bohol-chocolate-hills',
+    title: 'Chocolate Hills, Bohol',
+    subtitle: 'Countryside adventure',
     durationHours: 9,
     basePrice: 1800,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1532589210287-59c140e08695'),
+    image: unsplash('photo-1757949640707-805fc997ae4c'),
     description:
-      'Seljalandsfoss, Skógafoss, Sólheimajökull, Vík, Black Beach, and Dyrhólaey when open. Come with us for a tour through the amazing landscape of the South Coast of Iceland.',
+      'The Chocolate Hills of Bohol — hundreds of conical mounds across the countryside — with tarsier sanctuary and quiet rural roads. Come with us for a tour through Bohol’s most famous landscape.',
     highlights: [
-      'Seljalandsfoss & Skógafoss',
-      'Sólheimajökull',
-      'Vík · Black Beach · Dyrhólaey',
+      'Chocolate Hills viewpoint',
+      'Philippine tarsier sanctuary',
+      'Bohol countryside roads',
     ],
+    note: 'Air transfer to Bohol arranged separately — chauffeur meets you on the ground.',
   },
   {
-    id: 'golden-circle',
-    title: 'Gullfoss, Geysir & Þingvellir',
-    subtitle: 'Classic Golden Circle',
+    id: 'tagaytay-taal',
+    title: 'Tagaytay & Taal Vista',
+    subtitle: 'Classic day trip from Manila',
     durationHours: 7,
     basePrice: 1500,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1559510980-2491b1b9f875'),
+    image: unsplash('photo-1760982228709-49e8d18dd284'),
     description:
-      'In Þingvellir you will enjoy beautiful landscape while listening to the great history of the place. From there we go to the boiling Geysir and the powerful waterfall Gullfoss.',
+      'From Manila we drive south to Tagaytay’s ridge for the view of Taal Volcano in the lake. Cool highland air, a long lunch stop, and the classic day trip when you want the city behind you.',
     highlights: [
-      'Þingvellir National Park',
-      'Geysir geothermal area',
-      'Gullfoss waterfall',
+      'Tagaytay ridge viewpoint',
+      'Taal Volcano in the lake',
+      'Highland lunch stop',
     ],
   },
   {
-    id: 'vestmannaeyjar',
-    title: 'Vestmannaeyjar',
-    subtitle: 'Westman Islands',
+    id: 'banaue-batad',
+    title: 'Banaue & Batad Rice Terraces',
+    subtitle: 'Cordillera highlands',
     durationHours: 8,
     basePrice: 2000,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1635783651424-c7a21cd71549'),
+    image: unsplash('photo-1716863451357-f193111b8f8e'),
     description:
-      'Westman Islands are islands off the South Coast of Iceland. On one of them is a little and beautiful town of 4–5 thousand inhabitants. Incredible nature and big history touch everyone who goes there. We will sail out by ferry.',
+      'The rice terraces of Banaue and Batad are carved into the Cordillera — a landscape of steps, villages, and mountain weather. We travel north with a chauffeur-guide who knows the roads and the timing.',
     highlights: [
-      'Ferry to the Westman Islands',
-      'Island town & nature',
-      'Rich local history',
+      'Banaue amphitheatre views',
+      'Batad rice terraces',
+      'Ifugao highland villages',
     ],
+    note: 'Long northbound drive from Manila — overnight lodging can be arranged.',
   },
   {
-    id: 'northern-lights',
-    title: 'Private Northern Lights Tour',
-    subtitle: 'Aurora hunt',
+    id: 'intramuros-manila',
+    title: 'Intramuros & Old Manila',
+    subtitle: 'Walled-city heritage',
     durationHours: 4,
     basePrice: 1000,
     currency: 'EUR',
     maxPassengers: 6,
-    image: unsplash('photo-1531366936337-7c912a4589a7'),
+    image: unsplash('photo-1743309196261-1b4f7028b297'),
     description:
-      'To see the Northern Lights dancing in the sky is a wonder. Because of the bright nights during summer it is not possible to see the Northern Lights from the beginning of May to around 20 August.',
+      'Intramuros is the old walled city of Manila — San Agustin, Fort Santiago, cobblestone streets. A half-day heritage circuit with a private car, timed around your hotel or NAIA layover.',
     highlights: [
-      'Private aurora chase',
-      'Dark-sky locations',
-      'Seasonal availability',
+      'San Agustin Church',
+      'Fort Santiago',
+      'Walled-city walking with the car nearby',
     ],
-    note: 'Not available early May – ~20 August (bright nights).',
   },
   {
     id: 'wedding-chauffeur',
     title: 'Wedding Chauffeur',
-    subtitle: 'Brúðkaups akstur',
+    subtitle: 'Serbisyo sa kasalan',
     durationHours: 4,
     basePrice: 59900,
-    currency: 'ISK',
+    currency: 'PHP',
     maxPassengers: 6,
     image: unsplash('photo-1519741497674-611481863552'),
     description:
-      'The wedding day is one of the biggest events in our lives. Why not have a chauffeur in a decorated car to make the experience greater? Brúðkaupsdagurinn er einn stærsti viðburður lífsins — því ekki að hafa einkabílstjóra á skreyttum bíl?',
+      'The wedding day is one of the biggest events in our lives. Why not have a chauffeur in a decorated car to make the experience greater? Ang araw ng kasalan ay isa sa pinakamahahalagang araw — bakit hindi magkaroon ng pribadong tsuper sa pinalamutiang sasakyan?',
     highlights: [
       'Decorated chauffeur car',
       'Wedding-day timing',
-      'From 59.900 ISK',
+      'From ₱59,900',
     ],
   },
 ];
 
-export function formatMoney(amount: number, currency: OfferCurrency = 'EUR') {
+export function formatMoney(amount: number, currency: OfferCurrency | 'ISK' = 'EUR') {
+  if (currency === 'PHP') {
+    return `₱${amount.toLocaleString('en-PH')}`;
+  }
   if (currency === 'ISK') {
     return `${amount.toLocaleString('is-IS')} ISK`;
   }
   return `€${amount.toLocaleString('en-US')}`;
 }
 
-/** Airport transfer — to/from KEF · from €200 · up to 4 passengers */
+/** Airport transfer — to/from NAIA · from €200 · up to 4 passengers */
 export const AIRPORT_TRANSFER = {
   title: 'Airport Transfer',
   subtitle: 'To / from the airport',
@@ -222,13 +232,13 @@ export const AIRPORT_TRANSFER = {
     'Do you want to enter the country with comfort and style, and leave it in that way also? Rent a car with a private chauffeur.',
   fromEUR: 200,
   maxPassengers: 4,
-  route: 'KEF ↔ Reykjavík',
+  route: 'NAIA (MNL) ↔ Makati',
   image: unsplash('photo-1485291571150-772bcfc10da5'),
 };
 
 export const STOCK = {
   /** Range Rover, side profile */
   hero: unsplash('photo-1563458563737-e60b1f1b345f'),
-  /** Aurora over snow — Iceland night */
-  cta: unsplash('photo-1531366936337-7c912a4589a7'),
+  /** El Nido coastline — Palawan, Philippines */
+  cta: unsplash('photo-1757258631937-5dfdd0dae3a8'),
 };

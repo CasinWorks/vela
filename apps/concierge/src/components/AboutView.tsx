@@ -41,7 +41,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
             variants={heroReveal}
             className="font-serif-luxury text-4xl sm:text-5xl md:text-6xl text-white leading-[1.08]"
           >
-            Driven by Icelanders.<br />
+            Driven by Filipinos.<br />
             <span className="text-[#C5A880] font-light">Designed around you.</span>
           </motion.h1>
         </motion.div>
@@ -51,10 +51,10 @@ export const AboutView: React.FC<AboutViewProps> = ({
           className="max-w-3xl space-y-6 text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-16"
         >
           <p>
-            Vela Concierge is a studio concept for private chauffeur and day touring in Iceland, offering
-            customized transfers and daytrips from 2 – 16 hours, designed to fit the interests and
-            timetable for business or personal layover visits and/or cruise passengers seeking a
-            do-it-yourself excursion. You will be driven and escorted by an Icelandic driver-guide
+            Vela Concierge is a studio concept for private chauffeur and day touring in the Philippines,
+            offering customized transfers and daytrips from 2 – 16 hours, designed to fit the interests
+            and timetable for business or personal layover visits and/or cruise passengers seeking a
+            do-it-yourself excursion. You will be driven and escorted by a Filipino driver-guide
             in a comfortable vehicle that is suited for the terrain you will explore. If you have
             more time available, we will discuss your interests and prepare a personal tour that is
             sure to awe and inspire you.
@@ -78,8 +78,8 @@ export const AboutView: React.FC<AboutViewProps> = ({
             },
             {
               icon: MapPin,
-              title: 'Icelandic driver-guides',
-              body: 'Local escorts who know the terrain, the stories, and how to make the most of your time.',
+              title: 'Filipino driver-guides',
+              body: 'Local escorts who know the roads, the stories, and how to make the most of your time.',
             },
           ].map((item) => (
             <div key={item.title} className="space-y-3">

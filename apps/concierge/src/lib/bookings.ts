@@ -21,7 +21,7 @@ export interface BookingInquiry {
   notes: string;
   /** Numeric estimate in `estimateCurrency` */
   estimatedAmount: number;
-  estimateCurrency: 'EUR' | 'ISK';
+  estimateCurrency: 'EUR' | 'PHP' | 'ISK';
   /** @deprecated kept for older localStorage entries */
   estimatedUSD?: number;
 }
@@ -121,7 +121,7 @@ function pad(n: number) {
   return String(n).padStart(2, '0');
 }
 
-/** Build ICS datetime in local as floating time (no Z) for chauffeur jobs in Iceland. */
+/** Build ICS datetime in local as floating time (no Z) for chauffeur jobs in the Philippines. */
 function toIcsLocal(date: string, time: string, durationHours = 2) {
   const [y, m, d] = date.split('-').map(Number);
   const [hh, mm] = time.split(':').map(Number);
@@ -146,7 +146,13 @@ export function bookingToIcs(b: BookingInquiry): string {
     `Pickup: ${b.pickup}`,
     `Drop-off: ${b.dropoff}`,
     b.notes ? `Notes: ${b.notes}` : null,
-    `Estimate: ${b.estimateCurrency === 'ISK' ? `${b.estimatedAmount.toLocaleString('is-IS')} ISK` : `€${b.estimatedAmount.toLocaleString()}`}`,
+    `Estimate: ${
+      b.estimateCurrency === 'PHP'
+        ? `₱${b.estimatedAmount.toLocaleString('en-PH')}`
+        : b.estimateCurrency === 'ISK'
+          ? `${b.estimatedAmount.toLocaleString('is-IS')} ISK`
+          : `€${b.estimatedAmount.toLocaleString()}`
+    }`,
   ]
     .filter(Boolean)
     .join('\\n');
