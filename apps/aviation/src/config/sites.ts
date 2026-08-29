@@ -25,7 +25,7 @@ export const SIBLING = {
 export const STUDIO = {
   name: 'CasinWorks',
   credit: 'Studio concept · CasinWorks',
-  url: 'https://www.casinworks.com/case-studies/vela-brand-system',
+  url: 'https://www.casinworks.com',
   site: 'https://www.casinworks.com',
   email: 'studio@casinworks.com',
 } as const;

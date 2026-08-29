@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowDown, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { CONTACT, OFFERINGS, DO_IT_ALL, GALLERY_IMAGES, TEAM, IMAGES, STATS } from '../data/content';
+import { STUDIO } from '../config/sites';
 import { ContactForm } from './ContactForm';
 import { EcosystemBand } from './EcosystemBand';
 import { fadeUp as fadeUpPreset, easeLuxury } from '../lib/motion';
@@ -81,7 +82,7 @@ export const HomeView: React.FC = () => {
               ))}
             </div>
             <a
-              href="https://www.casinworks.com/case-studies/vela-brand-system"
+              href={STUDIO.url}
               className="shrink-0 text-[10px] tracking-[0.22em] uppercase text-[#C5A880] hover:text-white transition-colors"
             >
               Studio concept · CasinWorks

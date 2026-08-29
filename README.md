@@ -1,6 +1,6 @@
 # Vela — studio concept (CasinWorks)
 
-Three branded sites under one repository. This is a **portfolio concept** for [casinworks.com](https://www.casinworks.com/case-studies/vela-brand-system) — not a live operator.
+Three branded sites under one repository. This is a **portfolio concept** for [casinworks.com](https://www.casinworks.com) — not a live operator.
 
 | App | Folder | Dev port | Production |
 |-----|--------|----------|------------|
