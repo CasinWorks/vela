@@ -46,7 +46,7 @@ export const HomeView: React.FC = () => {
               <span className="text-[#C5A880] font-light italic">to serve</span>
             </h1>
             <p className="text-slate-300 text-base sm:text-lg font-light max-w-lg leading-relaxed">
-              Worldwide aircraft delivery and ferry service with highly qualified pilots —
+              Worldwide aircraft delivery and ferry service from Manila —
               dispatched when you need them.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-1">
@@ -100,11 +100,11 @@ export const HomeView: React.FC = () => {
                 Welcome
               </span>
               <h2 className="font-serif-luxury text-[clamp(2.25rem,4.5vw,3.75rem)] text-[#0F172A] leading-[1.05]">
-                Thirty years of worldwide aviation experience.
+                Thirty years of Asia-Pacific aviation experience.
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-light max-w-md">
                 With our dedicated team of experts we can assist with all your needs in aviation.
-                All our pilots have worldwide flight operations experience.
+                All our pilots have worldwide flight operations experience, with Manila as home base.
               </p>
               <button
                 onClick={() => scrollTo('team')}
@@ -255,7 +255,7 @@ export const HomeView: React.FC = () => {
               </h2>
             </div>
             <p className="text-xs text-slate-500 max-w-xs sm:text-right leading-relaxed">
-              Delivery, ferry and demo missions across the globe.
+              Delivery, ferry and demo missions across Asia-Pacific and beyond.
             </p>
           </motion.div>
 

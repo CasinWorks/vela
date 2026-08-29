@@ -29,8 +29,8 @@ export const AviationQuoteEngine: React.FC<AviationQuoteEngineProps> = ({
 }) => {
   const [inquiry, setInquiry] = useState<AviationInquiryState>({
     serviceType: 'ferry_delivery',
-    originIcao: 'KTEB',
-    destinationIcao: 'EGLF',
+    originIcao: 'RPLL',
+    destinationIcao: 'WSSS',
     aircraftCategory: 'gulfstream-g650er',
     passengers: 4,
     departureDate: new Date().toISOString().split('T')[0],
@@ -54,10 +54,17 @@ export const AviationQuoteEngine: React.FC<AviationQuoteEngineProps> = ({
   // Estimation helper: calculate approximate flight distance & hours
   const calculateFlightEstimates = () => {
     // Rough great-circle distance simulation based on airport pairs
-    let nauticalMiles = 2900; // default transatlantic
-    if (inquiry.originIcao === 'KTEB' && inquiry.destinationIcao === 'EGLF') nauticalMiles = 3000;
-    if (inquiry.originIcao === 'BIKF' || inquiry.destinationIcao === 'BIKF') nauticalMiles = 1200;
-    if (inquiry.originIcao === 'OMDB' || inquiry.destinationIcao === 'OMDB') nauticalMiles = 3800;
+    let nauticalMiles = 1600; // default Asia-Pacific
+    if (inquiry.originIcao === 'RPLL' && inquiry.destinationIcao === 'WSSS') nauticalMiles = 1300;
+    else if (inquiry.originIcao === 'OMDB' || inquiry.destinationIcao === 'OMDB') nauticalMiles = 3800;
+    else if (inquiry.originIcao === 'KLAX' || inquiry.destinationIcao === 'KLAX') nauticalMiles = 6200;
+    else if (
+      inquiry.originIcao === 'RPLL' ||
+      inquiry.destinationIcao === 'RPLL' ||
+      inquiry.originIcao === 'RPLC' ||
+      inquiry.destinationIcao === 'RPLC'
+    )
+      nauticalMiles = 1400;
 
     const speed = selectedAircraft.speedKts || 450;
     const hours = Math.round((nauticalMiles / speed + 0.5) * 10) / 10;
@@ -105,7 +112,7 @@ export const AviationQuoteEngine: React.FC<AviationQuoteEngineProps> = ({
 
           <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded text-xs text-slate-300">
             <Radio className="w-3.5 h-3.5 text-[#C5A880] animate-pulse" />
-            <span>North Atlantic Track (NAT) Dispatch Active</span>
+            <span>Asia-Pacific Dispatch Active</span>
           </div>
         </div>
       </div>
@@ -120,8 +127,8 @@ export const AviationQuoteEngine: React.FC<AviationQuoteEngineProps> = ({
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
-              { id: 'ferry_delivery', title: 'Aircraft Delivery / Ferry', desc: 'Transatlantic & global relocations with FAA/EASA ferry crews.' },
-              { id: 'charter', title: 'Private VIP Charter', desc: 'On-demand charter flights across Europe, North America & Middle East.' },
+              { id: 'ferry_delivery', title: 'Aircraft Delivery / Ferry', desc: 'Asia-Pacific & global relocations with FAA/CAAP ferry crews.' },
+              { id: 'charter', title: 'Private VIP Charter', desc: 'On-demand charter flights across ASEAN, North Asia & the Pacific.' },
               { id: 'oceanic_support', title: 'Oceanic Flight Planning', desc: 'HF comms, survival immersion suits, overflight & fuel permits.' },
               { id: 'aircraft_management', title: 'Crew & Management', desc: 'Type-rated captain placement, maintenance ferrying & consulting.' }
             ].map(type => (
@@ -294,7 +301,7 @@ export const AviationQuoteEngine: React.FC<AviationQuoteEngineProps> = ({
           <div className="space-y-1 border-t sm:border-t-0 border-white/10 pt-2 sm:pt-0">
             <span className="text-[10px] text-slate-400 uppercase tracking-widest block">Direct Technical Stops</span>
             <span className="text-sm font-semibold text-white">
-              {estimates.nauticalMiles > selectedAircraft.rangeNm ? '1 Stop (Greenland / KEF)' : 'Non-Stop Direct'}
+              {estimates.nauticalMiles > selectedAircraft.rangeNm ? '1 Stop (Clark / Guam)' : 'Non-Stop Direct'}
             </span>
           </div>
         </div>

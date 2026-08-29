@@ -1,6 +1,6 @@
 export type ActiveDivision = 'parent' | 'limousine' | 'jets' | 'blueprint' | 'about';
 
-export type Currency = 'USD' | 'EUR' | 'ISK' | 'GBP';
+export type Currency = 'USD' | 'EUR' | 'PHP' | 'GBP';
 
 export interface GroundVehicle {
   id: string;
@@ -62,7 +62,7 @@ export interface BookingAddon {
 
 export interface GroundBookingState {
   serviceType: 'airport_transfer' | 'hourly_hire' | 'day_tour' | 'tarmac_vip';
-  originAirport?: 'KEF' | 'RKV' | 'custom';
+  originAirport?: 'MNL' | 'CRK' | 'custom';
   pickupAddress: string;
   dropoffAddress: string;
   selectedTourId?: string;

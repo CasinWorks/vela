@@ -55,7 +55,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenEnquiry, onBackHome 
           <p>
             Through Vela Aviation we deliver ferry flights, crew dispatch, and oceanic planning worldwide.
             Through Vela Concierge we offer licenced, customized transfers and daytrips from 2 –
-            16 hours — driven and escorted by Icelandic driver-guides in vehicles suited to the
+            16 hours — driven and escorted by Filipino driver-guides in vehicles suited to the
             terrain you will explore.
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenEnquiry, onBackHome 
             <h2 className="font-serif-luxury text-2xl text-white mb-3">Vela Concierge</h2>
             <p className="text-sm text-slate-400 leading-relaxed mb-6">
               Customized transfers and daytrips for layover, business, and cruise guests — with
-              Icelandic driver-guides and terrain-ready vehicles.
+              Filipino driver-guides and terrain-ready vehicles.
             </p>
             <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-[#C5A880] font-semibold">
               Visit ground site{' '}
@@ -111,8 +111,8 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenEnquiry, onBackHome 
             },
             {
               icon: Globe2,
-              title: 'Reykjavík rooted',
-              body: 'Operated from Iceland with international reach across ferry and delivery missions.',
+              title: 'Manila rooted',
+              body: 'Operated from the Philippines with international reach across ferry and delivery missions.',
             },
             {
               icon: Users,

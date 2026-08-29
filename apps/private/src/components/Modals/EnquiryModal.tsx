@@ -39,11 +39,11 @@ const SERVICE_OPTIONS = [
   {
     id: 'limousine',
     label: 'Vela Concierge',
-    hint: 'KEF transfers, tours & wedding chauffeur',
+    hint: 'NAIA transfers, tours & wedding chauffeur',
   },
   {
     id: 'airport',
-    label: 'KEF Airport VIP Transfer',
+    label: 'NAIA Airport VIP Transfer',
     hint: 'Private tarmac-to-hotel ground service',
   },
   {
@@ -62,8 +62,8 @@ function resolveTopic(raw?: string): string {
   if (lower.includes('limousine') || lower.includes('chauffeur') || lower.includes('tour')) {
     return 'Vela Concierge';
   }
-  if (lower.includes('kef') || lower.includes('airport') || lower.includes('transfer')) {
-    return 'KEF Airport VIP Transfer';
+  if (lower.includes('naia') || lower.includes('mnl') || lower.includes('airport') || lower.includes('transfer')) {
+    return 'NAIA Airport VIP Transfer';
   }
   if (lower.includes('general') || lower.includes('contact')) {
     return 'General Concierge';
@@ -239,7 +239,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                         <span className="text-[#C5A880] font-light italic">dispatch.</span>
                       </h1>
                       <p className="text-slate-400 text-sm leading-relaxed max-w-lg">
-                        Private aviation and luxury chauffeur specialists on duty in Reykjavík &amp; London.
+                        Private aviation and luxury chauffeur specialists on duty in Manila &amp; Singapore.
                         Your enquiry is handled under strict non-disclosure protocol.
                       </p>
                     </motion.div>

@@ -54,19 +54,19 @@ export const TEAM = [
     role: 'Chief Pilot',
     email: 'studio@casinworks.com',
     image: unsplash('photo-1580489944761-15a19d654956', 800),
-    bio: 'Two decades of long-range ferry and delivery work across EASA and FAA theatres. Types include B737, 757, A320 and Gulfstream. Focused on oceanic planning, crew pairing, and quiet execution.',
+    bio: 'Two decades of long-range ferry and delivery work across Asia-Pacific, CAAP and FAA theatres. Types include B737, 757, A320 and Gulfstream. Focused on oceanic planning, crew pairing, and quiet execution.',
   },
   {
     name: 'Marcus Hale',
     role: 'Operations Director',
     email: 'studio@casinworks.com',
     image: unsplash('photo-1507003211169-0a1dd7228f2d', 800),
-    bio: 'Operations lead for ferry, demo, and lease-support missions. Coordinates permits, ground handling, and 24-hour crew dispatch so the aircraft moves on schedule.',
+    bio: 'Operations lead for ferry, demo, and lease-support missions from Manila. Coordinates permits, ground handling, and 24-hour crew dispatch so the aircraft moves on schedule.',
   },
 ];
 
 export const STATS = [
   { value: '30+', label: 'Years worldwide' },
   { value: '24h', label: 'Crew dispatch' },
-  { value: 'Global', label: 'Ferry network' },
+  { value: 'Manila', label: 'Asia-Pacific hub' },
 ];

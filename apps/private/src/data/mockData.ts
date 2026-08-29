@@ -4,7 +4,7 @@ export const CURRENCY_RATES = {
   USD: { symbol: '$', rate: 1, label: 'USD ($)' },
   EUR: { symbol: '€', rate: 0.92, label: 'EUR (€)' },
   GBP: { symbol: '£', rate: 0.79, label: 'GBP (£)' },
-  ISK: { symbol: 'kr', rate: 138, label: 'ISK (kr)' },
+  PHP: { symbol: '₱', rate: 56, label: 'PHP (₱)' },
 };
 
 export const TRUST_METRICS: TrustMetric[] = [
@@ -24,7 +24,7 @@ export const TRUST_METRICS: TrustMetric[] = [
     icon: "ShieldCheck"
   },
   {
-    title: "Iceland Experts",
+    title: "Philippines Experts",
     description: "Local knowledge and access to extraordinary experiences.",
     icon: "Compass"
   }
@@ -42,12 +42,12 @@ export const GROUND_FLEET: GroundVehicle[] = [
     transferRateKEF_USD: 390,
     tag: "Chauffeur Flagship",
     description: "Executive sedan for chauffeur transfers. Quiet cabin, all-wheel drive, and a classic Mercedes-Benz presence.",
-    features: ["Executive rear seating", "Active acoustic glass", "Icelandic glacier water", "High-speed 5G Wi-Fi", "Mobile charging suite"],
+    features: ["Executive rear seating", "Active acoustic glass", "Still water & amenities", "High-speed 5G Wi-Fi", "Mobile charging suite"],
     specs: {
       drivetrain: "4MATIC All-Wheel Drive",
       interior: "Nappa Exclusive Leather",
       wifi: true,
-      refreshments: "Glacier Spring Water & Mints",
+      refreshments: "Still Water & Mints",
       luggageVolume: "550 Litres"
     }
   },
@@ -80,14 +80,14 @@ export const GROUND_FLEET: GroundVehicle[] = [
     image: "https://images.unsplash.com/photo-1549632891-a0bea6d0355b?auto=format&fit=crop&w=1200&q=80",
     hourlyRateUSD: 260,
     transferRateKEF_USD: 520,
-    tag: "Iceland All-Terrain Luxury",
-    description: "Peerless refinement meets Icelandic volcanic capability. Effortlessly navigates snow, lava field passes, and coastal routes with air suspension.",
+    tag: "Philippine All-Terrain Luxury",
+    description: "Peerless refinement for Philippine mountain roads — Tagaytay ridge, Cordillera approaches, and monsoon weather — with air suspension.",
     features: ["Executive Class rear seats", "Meridian Signature audio", "Heated & cooled massagers", "Dynamic air suspension", "Panoramic skyroof"],
     specs: {
       drivetrain: "Terrain Response 2 AWD",
       interior: "Semi-Aniline Perforated Leather",
       wifi: true,
-      refreshments: "Icelandic Spring Water & Amenities",
+      refreshments: "Still Water & Amenities",
       luggageVolume: "900 Litres"
     }
   },
@@ -121,7 +121,7 @@ export const GROUND_FLEET: GroundVehicle[] = [
     hourlyRateUSD: 310,
     transferRateKEF_USD: 620,
     tag: "Highland touring",
-    description: "Range Rover for highland approaches and winter roads — high clearance with executive comfort for up to four passengers.",
+    description: "Range Rover for highland approaches and wet-season roads — high clearance with executive comfort for up to four passengers.",
     features: ["Up to 4 passengers", "Executive specification", "Full-time 4WD", "High ground clearance", "Climate-controlled cabin"],
     specs: {
       drivetrain: "Full-time 4WD",
@@ -143,10 +143,10 @@ export const AIRCRAFT_FLEET: Aircraft[] = [
     speedKts: 488,
     image: "https://images.unsplash.com/photo-1684838200888-192e2a163cc9?auto=format&fit=crop&w=1200&q=80",
     hourlyRateUSD: 11800,
-    description: "The gold standard in transatlantic and intercontinental private aviation. Flies non-stop from Reykjavik (KEF) to Los Angeles, Tokyo, or Dubai with low cabin altitude.",
-    features: ["Signature oval cabin windows", "Private stateroom & berthable divan", "Ka-band high-speed satellite Wi-Fi", "Full galley & dedicated flight attendant", "Long-range transatlantic capability"],
-    capabilities: ["Non-stop transatlantic", "High altitude cruise (51,000 ft)", "Polar route certified", "Oceanic RNP-4 equipped"],
-    idealFor: "Intercontinental VIP missions, executive board delegations, nonstop flights to US West Coast & Asia."
+    description: "The gold standard in intercontinental private aviation. Flies non-stop from Manila (RPLL) to Los Angeles, Tokyo, or Dubai with low cabin altitude.",
+    features: ["Signature oval cabin windows", "Private stateroom & berthable divan", "Ka-band high-speed satellite Wi-Fi", "Full galley & dedicated flight attendant", "Long-range transpacific capability"],
+    capabilities: ["Non-stop transpacific", "High altitude cruise (51,000 ft)", "ETOPS oceanic certified", "Oceanic RNP-4 equipped"],
+    idealFor: "Intercontinental VIP missions, executive board delegations, nonstop flights to US West Coast, Japan & the Gulf."
   },
   {
     id: "bombardier-challenger-350",
@@ -157,10 +157,10 @@ export const AIRCRAFT_FLEET: Aircraft[] = [
     speedKts: 475,
     image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1200&q=80",
     hourlyRateUSD: 7200,
-    description: "Three-engine long-range cabin for European and North Atlantic missions. Rear-mounted trijet layout with a stand-up cabin and transatlantic range.",
+    description: "Three-engine long-range cabin for ASEAN and North Asia missions. Rear-mounted trijet layout with a stand-up cabin and regional-plus range.",
     features: ["Rear-mounted trijet layout", "Stand-up cabin", "Enclosed private lavatory", "Full inflight accessible baggage", "Gourmet hot catering"],
-    capabilities: ["Steep approach certified (London City)", "Short runway performance", "Full North Atlantic tracks"],
-    idealFor: "European charter hops, London/Paris to Iceland private transfers, North Atlantic technical stops."
+    capabilities: ["Short runway performance", "Steep approach capable", "Full Asia-Pacific routing"],
+    idealFor: "ASEAN charter hops, Singapore / Hong Kong / Tokyo private transfers, intra-Asia technical stops."
   },
   {
     id: "embraer-phenom-300e",
@@ -171,10 +171,10 @@ export const AIRCRAFT_FLEET: Aircraft[] = [
     speedKts: 488,
     image: "https://images.unsplash.com/photo-1684838200815-36eef38f353c?auto=format&fit=crop&w=1200&q=80",
     hourlyRateUSD: 4400,
-    description: "Large-cabin Gulfstream for ferry, demo, and long-range delivery work. Oval windows, rear-mounted engines, and transatlantic legs from Iceland.",
+    description: "Large-cabin Gulfstream for ferry, demo, and long-range delivery work. Oval windows, rear-mounted engines, and Asia-Pacific legs from Manila.",
     features: ["Oval cabin windows", "Rear-mounted turbofans", "Long-range cruise", "Dedicated flight attendant"],
     capabilities: ["Rapid turnaround", "Direct climb to 45,000 ft", "Regional high-speed courier"],
-    idealFor: "Greenland / Faroe Islands / UK / Scandinavia regional hops, agile business charter."
+    idealFor: "Singapore / Hong Kong / Tokyo / Sydney regional hops, agile business charter."
   },
   {
     id: "ferry-pilatus-pc12",
@@ -185,100 +185,100 @@ export const AIRCRAFT_FLEET: Aircraft[] = [
     speedKts: 290,
     image: "https://images.unsplash.com/photo-1693835195915-b30cc5ae885c?auto=format&fit=crop&w=1200&q=80",
     hourlyRateUSD: 2900,
-    description: "The workhorse of transatlantic aircraft delivery, oceanic ferrying, and remote Icelandic airstrip missions. Outfitted with survival immersion gear and HF oceanic avionics.",
-    features: ["Cargo door for oceanic survival gear", "Pratt & Whitney PT6 reliability", "Unpaved gravel runway clearance", "Auxiliary ferry tank compatible"],
-    capabilities: ["Greenland Narsarsuaq & Kulusuk ops", "Transatlantic delivery & ferry", "Oceanic flight planning"],
-    idealFor: "Aircraft relocation, transatlantic ferry routing, extreme remote Icelandic airfield access."
+    description: "The workhorse of island aircraft delivery, short-field ferrying, and remote Philippine airstrip missions. Outfitted for unpaved strips and HF oceanic avionics.",
+    features: ["Cargo door for survival gear", "Pratt & Whitney PT6 reliability", "Unpaved gravel runway clearance", "Auxiliary ferry tank compatible"],
+    capabilities: ["Palawan & Visayas short-field ops", "Asia-Pacific delivery & ferry", "Oceanic flight planning"],
+    idealFor: "Aircraft relocation, island ferry routing, remote Philippine airfield access."
   }
 ];
 
 export const ICELAND_TOURS: IcelandTour[] = [
   {
-    id: "golden-circle-luxury",
-    title: "The Golden Circle Private Signature",
-    tagline: "Þingvellir Rift, Geysir Eruptions & Gullfoss Cascade",
+    id: "tagaytay-taal-luxury",
+    title: "Tagaytay & Taal Vista Signature",
+    tagline: "Ridge Viewpoint, Taal Volcano & Highland Lunch",
     durationHours: 8,
     basePriceUSD: 1150,
-    distanceKm: 280,
+    distanceKm: 140,
     isPopular: true,
     recommendedVehicleId: "range-rover-auto",
-    image: "https://images.unsplash.com/photo-1559510980-2491b1b9f875?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1760982228709-49e8d18dd284?auto=format&fit=crop&w=1200&q=80",
     highlights: [
-      "Walk between continents at UNESCO Þingvellir National Park",
-      "VIP access to erupting Strokkur geothermal geysir",
-      "Private viewing ledge above thunderous Gullfoss Waterfall",
-      "Exclusive lunch reservation at Friðheimar tomato greenhouse or private chef"
+      "Tagaytay ridge viewpoint over Taal Lake",
+      "Private timing away from coach-tour crowds",
+      "Highland lunch reservation with lake views",
+      "Cool-air stop on the way back to Manila"
     ],
-    description: "The classic Icelandic circuit reimagined as a private VIP journey. Avoid tourist buses with tailored timings, bespoke champagne stops, and an expert local driver-guide."
+    description: "The classic day trip from Manila reimagined as a private VIP journey. Avoid tourist buses with tailored timings, bespoke lunch stops, and an expert Filipino driver-guide."
   },
   {
-    id: "south-coast-glaciers",
-    title: "South Coast Waterfalls & Black Sand Beaches",
-    tagline: "Seljalandsfoss, Skógafoss & Reynisfjara Basalt Columns",
+    id: "el-nido-palawan",
+    title: "El Nido Hidden Lagoons",
+    tagline: "Limestone Karsts, Turquoise Water & Private Banca",
     durationHours: 10,
     basePriceUSD: 1450,
     distanceKm: 380,
     isPopular: true,
     recommendedVehicleId: "mb-v-class-vip",
-    image: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1749995925383-5195d00a6811?auto=format&fit=crop&w=1200&q=80",
     highlights: [
-      "Walk behind the cascade of Seljalandsfoss waterfall",
-      "Stand before the majestic 60-meter drop of Skógafoss",
-      "Roam the dramatic volcanic black basalt beaches of Reynisfjara",
-      "Optional add-on: Private snowmobile or helicopter landing on Eyjafjallajökull"
+      "Limestone lagoons of El Nido, Palawan",
+      "Private banca island-hopping timed to you",
+      "Hidden beaches and snorkel stops",
+      "Chauffeur meet-and-greet on the ground"
     ],
-    description: "Dramatic glaciers, towering sea cliffs, roaring waterfalls, and black volcanic sands along Iceland's famous southern shoreline in absolute private comfort."
+    description: "Karst cliffs, turquoise lagoons, and island time on your own terms. Air transfer to Palawan is arranged separately — your chauffeur meets you on arrival."
   },
   {
-    id: "blue-lagoon-retreat",
-    title: "Reykjanes Peninsula & Blue Lagoon VIP Retreat",
-    tagline: "Volcanic Fissures, Reykjanesviti & Exclusive Mineral Sanctuary",
-    durationHours: 6,
+    id: "bohol-chocolate-hills",
+    title: "Chocolate Hills, Bohol",
+    tagline: "Conical Hills, Tarsier Sanctuary & Countryside Roads",
+    durationHours: 9,
     basePriceUSD: 850,
-    distanceKm: 140,
+    distanceKm: 220,
     recommendedVehicleId: "mb-s-class",
-    image: "https://images.unsplash.com/photo-1592961091248-a2b407825a3e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1757949640707-805fc997ae4c?auto=format&fit=crop&w=1200&q=80",
     highlights: [
-      "Geothermal bubbling mud pools at Seltún & Gunnuhver",
-      "Bridge Between Continents tectonic crossing",
-      "VIP Host door-to-door escort to The Retreat Spa at Blue Lagoon",
-      "Private changing suite with subterranean lagoon access"
+      "Chocolate Hills viewpoint in Bohol",
+      "Philippine tarsier sanctuary",
+      "Quiet countryside roads away from coaches",
+      "Optional countryside lunch stop"
     ],
-    description: "The ultimate wellness and arrival transition. Connect directly from your private jet or international flight into geothermal luxury on the Reykjanes peninsula."
+    description: "Hundreds of conical mounds across the Bohol countryside, with tarsier sanctuary and rural roads in absolute private comfort. Air transfer arranged separately."
   },
   {
-    id: "glacier-highlands-superjeep",
-    title: "Langjökull Glacier Ice Tunnel & Highland Super Jeep",
-    tagline: "Deep Interior Ice Cave & Untamed Lava Fields",
+    id: "banaue-batad",
+    title: "Banaue & Batad Rice Terraces",
+    tagline: "Cordillera Highlands, Ifugao Villages & Amphitheatre Views",
     durationHours: 9,
     basePriceUSD: 1650,
-    distanceKm: 320,
+    distanceKm: 350,
     recommendedVehicleId: "arctic-superjeep",
-    image: "https://images.unsplash.com/photo-1768078557772-79741862c07d?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1716863451357-f193111b8f8e?auto=format&fit=crop&w=1200&q=80",
     highlights: [
-      "Drive across deep glacial crevasses with our 44-inch Arctic Super Jeep",
-      "Enter man-made subglacial ice tunnels 300m into blue glacier ice",
-      "Traverse Húsafell and the volcanic Kaldidalur highland mountain pass",
-      "Glacier champagne toast on the ice cap"
+      "Banaue amphitheatre rice-terrace views",
+      "Batad village and stepped paddies",
+      "Cordillera highland weather and roads",
+      "Overnight lodging arranged on request"
     ],
-    description: "An exhilarating private luxury expedition into Iceland's untamed interior, accessible exclusively with Arctic-grade custom modified luxury vehicles."
+    description: "A private luxury expedition into the Cordillera — carved terraces, mountain villages, and a chauffeur-guide who knows the roads and the timing."
   },
   {
-    id: "northern-lights-hunt",
-    title: "Private Aurora Borealis Chauffeur & Stargazing",
-    tagline: "Real-time Solar Storm Tracking & Remote Dark Sky Glens",
+    id: "intramuros-manila",
+    title: "Intramuros & Old Manila Heritage",
+    tagline: "San Agustin, Fort Santiago & the Walled City",
     durationHours: 5,
     basePriceUSD: 950,
-    distanceKm: 180,
+    distanceKm: 40,
     recommendedVehicleId: "range-rover-auto",
-    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1743309196261-1b4f7028b297?auto=format&fit=crop&w=1200&q=80",
     highlights: [
-      "Dedicated aurora meteorologist tracking cloud cover and solar flares",
-      "Hot Icelandic cocoa, artisanal spirits, and warm wool blankets",
-      "Professional high-aperture camera photos of you under the Northern Lights",
-      "Flexible start time based on prime nocturnal solar forecast"
+      "San Agustin Church, Intramuros",
+      "Fort Santiago and cobblestone streets",
+      "Walled-city walking with the car nearby",
+      "Timed around your hotel or NAIA layover"
     ],
-    description: "Escape light pollution in total warmth. Your private chauffeur hunts active auroral ribbons across dark fjords with real-time satellite telemetry."
+    description: "A half-day heritage circuit through the old walled city of Manila — private car, Filipino driver-guide, and timing built around your layover or hotel."
   }
 ];
 
@@ -292,8 +292,8 @@ export const BOOKING_ADDONS: BookingAddon[] = [
   },
   {
     id: "champagne-glacier",
-    name: "Veuve Clicquot & Icelandic Delicacies",
-    description: "Chilled bottle of vintage Champagne on ice with artisanal Icelandic chocolates and glacier refreshments.",
+    name: "Veuve Clicquot & Filipino Delicacies",
+    description: "Chilled bottle of vintage Champagne on ice with artisanal Filipino chocolates and tropical refreshments.",
     priceUSD: 140,
     iconName: "Wine"
   },
@@ -307,28 +307,28 @@ export const BOOKING_ADDONS: BookingAddon[] = [
   {
     id: "luggage-van",
     name: "Dedicated Secondary Luggage Van Support",
-    description: "For excessive oversized luggage, golf sets, ski gear, or filming equipment following your vehicle.",
+    description: "For excessive oversized luggage, golf sets, diving gear, or filming equipment following your vehicle.",
     priceUSD: 280,
     iconName: "Truck"
   },
   {
     id: "multilingual-guide",
     name: "Multilingual Specialist Driver Guide",
-    description: "Certified Icelandic historian/geologist guide fluent in French, German, Spanish or Mandarin.",
+    description: "Certified Filipino cultural historian guide fluent in French, German, Spanish, Mandarin or Japanese.",
     priceUSD: 190,
     iconName: "Languages"
   }
 ];
 
 export const POPULAR_AIRPORTS = [
-  { icao: "BIKF", iata: "KEF", name: "Keflavík International Airport", city: "Reykjavik, Iceland" },
-  { icao: "BIRK", iata: "RKV", name: "Reykjavík City Airport (FBO/Domestic)", city: "Reykjavik, Iceland" },
-  { icao: "KTEB", iata: "TEB", name: "Teterboro Airport (NYC VIP)", city: "New York, USA" },
-  { icao: "EGLF", iata: "FAB", name: "Farnborough Airport", city: "London, UK" },
-  { icao: "LFPB", iata: "LBG", name: "Paris Le Bourget Airport", city: "Paris, France" },
-  { icao: "LSGG", iata: "GVA", name: "Geneva Cointrin Airport", city: "Geneva, Switzerland" },
-  { icao: "OMDB", iata: "DXB", name: "Dubai International (Al Maktoum VIP)", city: "Dubai, UAE" },
-  { icao: "KMIA", iata: "MIA", name: "Miami International / Opa-locka VIP", city: "Miami, USA" },
-  { icao: "BGBW", iata: "UAK", name: "Narsarsuaq Airport (Transatlantic Fuel)", city: "Greenland" },
-  { icao: "EKVG", iata: "FAE", name: "Vágar Airport", city: "Faroe Islands" }
+  { icao: "RPLL", iata: "MNL", name: "Ninoy Aquino International Airport", city: "Manila, Philippines" },
+  { icao: "RPLC", iata: "CRK", name: "Clark International Airport (FBO)", city: "Clark / Angeles, Philippines" },
+  { icao: "RPVM", iata: "CEB", name: "Mactan-Cebu International Airport", city: "Cebu, Philippines" },
+  { icao: "RPVP", iata: "PPS", name: "Puerto Princesa International Airport", city: "Palawan, Philippines" },
+  { icao: "WSSS", iata: "SIN", name: "Singapore Changi Airport", city: "Singapore" },
+  { icao: "VHHH", iata: "HKG", name: "Hong Kong International Airport", city: "Hong Kong" },
+  { icao: "RJTT", iata: "HND", name: "Tokyo Haneda Airport", city: "Tokyo, Japan" },
+  { icao: "YSSY", iata: "SYD", name: "Sydney Kingsford Smith Airport", city: "Sydney, Australia" },
+  { icao: "KLAX", iata: "LAX", name: "Los Angeles International Airport", city: "Los Angeles, USA" },
+  { icao: "OMDB", iata: "DXB", name: "Dubai International (Al Maktoum VIP)", city: "Dubai, UAE" }
 ];

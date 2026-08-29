@@ -27,7 +27,7 @@ function divisionToHash(division: ActiveDivision) {
 
 /**
  * Parent brand portal only.
- * Aviation → Vela Aviation sibling site; Iceland → Vela Concierge sibling site.
+ * Aviation → Vela Aviation sibling site; Philippines → Vela Concierge sibling site.
  */
 export default function App() {
   const [activeDivision, setActiveDivision] = useState<ActiveDivision>(() => hashToDivision());

@@ -73,7 +73,7 @@ export const VELAJetsView: React.FC<VELAJetsViewProps> = ({
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg font-light max-w-xl leading-relaxed">
-              Based at the strategic crossroads of the North Atlantic. Specializing in transatlantic aircraft relocations, oceanic flight operations, and bespoke global jet charters.
+              Based at the strategic crossroads of Southeast Asia. Specializing in Asia-Pacific aircraft relocations, oceanic flight operations, and bespoke global jet charters.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -87,7 +87,7 @@ export const VELAJetsView: React.FC<VELAJetsViewProps> = ({
               </button>
 
               <button
-                onClick={() => onOpenEnquiry('Vela Aviation Transatlantic Ferry Flight Consultation')}
+                onClick={() => onOpenEnquiry('Vela Aviation Asia-Pacific Ferry Flight Consultation')}
                 className="bg-black/60 hover:bg-black/90 text-slate-200 hover:text-white border border-white/20 font-semibold text-xs tracking-widest uppercase px-6 py-3.5 rounded transition-all backdrop-blur-sm cursor-pointer"
               >
                 Direct Ops Dispatch
@@ -98,11 +98,11 @@ export const VELAJetsView: React.FC<VELAJetsViewProps> = ({
             <div className="pt-6 flex flex-wrap items-center gap-6 text-xs text-slate-400">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#C5A880]" />
-                FAA / EASA Commercial Captains
+                FAA / CAAP Commercial Captains
               </span>
               <span className="flex items-center gap-1.5">
                 <Globe className="w-4 h-4 text-[#C5A880]" />
-                North Atlantic NAT Track Specialists
+                Asia-Pacific Routing Specialists
               </span>
               <span className="flex items-center gap-1.5">
                 <Radio className="w-4 h-4 text-[#C5A880]" />
@@ -137,7 +137,7 @@ export const VELAJetsView: React.FC<VELAJetsViewProps> = ({
                 Global Performance &amp; Oceanic Range
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                From intercontinental ultra-long-range business jets to Arctic-spec turboprop delivery platforms.
+                From intercontinental ultra-long-range business jets to island-spec turboprop delivery platforms.
               </p>
             </div>
 
@@ -218,28 +218,28 @@ export const VELAJetsView: React.FC<VELAJetsViewProps> = ({
         </div>
       </section>
 
-      {/* 4. NORTH ATLANTIC FERRY ROUTING CORRIDOR INFO */}
+      {/* 4. ASIA-PACIFIC FERRY ROUTING CORRIDOR INFO */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#080B0E]">
         <div className="max-w-7xl mx-auto bg-gradient-to-r from-[#101622] to-[#0A0D14] border border-white/10 rounded-2xl p-8 sm:p-12 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             
             <div className="space-y-4">
               <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
-                TRANSATLANTIC ROUTING MASTERY
+                ASIA-PACIFIC ROUTING MASTERY
               </span>
               <h2 className="font-serif-luxury text-3xl sm:text-4xl text-white">
-                Why Iceland is the Strategic Gateway for Aircraft Ferry Flights
+                Why the Philippines is the Strategic Gateway for Aircraft Ferry Flights
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Positioned exactly halfway between North America and Continental Europe, Reykjavík (BIRK/BIKF) and Greenland (BGBW/BGKK) provide essential technical fuel stops, weather diversions, and oceanic ATC transitions.
+                Positioned at the heart of Southeast Asia, Manila (RPLL) and Clark (RPLC) provide essential technical fuel stops, weather diversions, and Asia-Pacific ATC transitions between North Asia, ASEAN, and transpacific legs.
               </p>
 
               <div className="space-y-2 pt-2">
                 {[
-                  "Complete oceanic flight plan filing (Gander & Shanwick Oceanic FIRs)",
+                  "Complete oceanic flight plan filing (Manila, Singapore & Tokyo FIRs)",
                   "Transport of FAA certified survival rafts and SOLAS immersion suits",
                   "Overflight, landing permits & diplomatic clearances worldwide",
-                  "Dual-qualified US FAA and European EASA ferry flight crews"
+                  "Dual-qualified US FAA and CAAP ferry flight crews"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
                     <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
@@ -251,31 +251,31 @@ export const VELAJetsView: React.FC<VELAJetsViewProps> = ({
 
             <div className="bg-black/60 border border-white/10 rounded-xl p-6 space-y-4">
               <h4 className="font-display-luxury text-xs uppercase tracking-widest text-white font-semibold">
-                Typical Transatlantic Ferry Route
+                Typical Asia-Pacific Ferry Route
               </h4>
               
               <div className="space-y-3 font-mono text-xs">
                 <div className="flex items-center justify-between p-2 rounded bg-white/5">
                   <span className="text-slate-400">1. Departure Point</span>
-                  <span className="text-white font-semibold">Teterboro (KTEB) / Bangor (KBGR)</span>
+                  <span className="text-white font-semibold">Tokyo (RJTT) / Seoul (RKSI)</span>
                 </div>
                 <div className="flex items-center justify-between p-2 rounded bg-white/5">
-                  <span className="text-slate-400">2. Arctic Transition</span>
-                  <span className="text-[#C5A880] font-semibold">Goose Bay (CYYR) / Narsarsuaq (BGBW)</span>
+                  <span className="text-slate-400">2. Island Transition</span>
+                  <span className="text-[#C5A880] font-semibold">Taipei (RCTP) / Guam (PGUM)</span>
                 </div>
                 <div className="flex items-center justify-between p-2 rounded bg-white/5 border border-[#C5A880]/30">
-                  <span className="text-slate-300">3. Mid-Atlantic Hub</span>
-                  <span className="text-amber-300 font-bold">Reykjavík FBO Hub (BIRK/BIKF)</span>
+                  <span className="text-slate-300">3. Manila Hub</span>
+                  <span className="text-amber-300 font-bold">NAIA / Clark FBO (RPLL/RPLC)</span>
                 </div>
                 <div className="flex items-center justify-between p-2 rounded bg-white/5">
-                  <span className="text-slate-400">4. European Terminal</span>
-                  <span className="text-white font-semibold">London (EGLF) / Paris (LFPB) / Zurich (LSZH)</span>
+                  <span className="text-slate-400">4. ASEAN Terminal</span>
+                  <span className="text-white font-semibold">Singapore (WSSS) / Hong Kong (VHHH) / Sydney (YSSY)</span>
                 </div>
               </div>
 
               <div className="pt-2 text-center">
                 <button
-                  onClick={() => onOpenEnquiry('Transatlantic Flight Planning Technical Brief')}
+                  onClick={() => onOpenEnquiry('Asia-Pacific Flight Planning Technical Brief')}
                   className="text-xs uppercase tracking-widest text-[#C5A880] hover:text-white font-semibold flex items-center justify-center gap-1.5 w-full pt-2"
                 >
                   <span>Request Oceanic Technical Brief</span>

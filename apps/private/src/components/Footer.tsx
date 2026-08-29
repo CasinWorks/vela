@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ goDivision, onOpenEnquiry }) => 
             </div>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              Two specialist divisions united under one seamless standard of discreet excellence. Connecting private jet aviation, transatlantic aircraft delivery, and bespoke luxury chauffeur journeys across the volcanic landscapes of Iceland.
+              Two specialist divisions united under one seamless standard of discreet excellence. Connecting private jet aviation, Asia-Pacific aircraft delivery, and bespoke luxury chauffeur journeys across the Philippines.
             </p>
 
             <div className="flex items-center space-x-3 pt-2">
@@ -90,10 +90,10 @@ export const Footer: React.FC<FooterProps> = ({ goDivision, onOpenEnquiry }) => 
               Specialist Services
             </h3>
             <ul className="space-y-1.5 text-xs text-slate-400">
-              <li><button type="button" onClick={() => onOpenEnquiry('KEF Airport Transfer')} className="hover:text-white transition-colors">KEF Airport VIP Transfer</button></li>
+              <li><button type="button" onClick={() => onOpenEnquiry('NAIA Airport Transfer')} className="hover:text-white transition-colors">NAIA Airport VIP Transfer</button></li>
               <li><button type="button" onClick={() => onOpenEnquiry('FBO Tarmac Escort')} className="hover:text-white transition-colors">Tarmac Airside Escort</button></li>
-              <li><button type="button" onClick={() => onOpenEnquiry('Golden Circle Tour')} className="hover:text-white transition-colors">Golden Circle Private Tour</button></li>
-              <li><button type="button" onClick={() => onOpenEnquiry('Transatlantic Ferry Flight')} className="hover:text-white transition-colors">Transatlantic Aircraft Ferry</button></li>
+              <li><button type="button" onClick={() => onOpenEnquiry('Tagaytay Taal Tour')} className="hover:text-white transition-colors">Tagaytay &amp; Taal Private Tour</button></li>
+              <li><button type="button" onClick={() => onOpenEnquiry('Asia-Pacific Ferry Flight')} className="hover:text-white transition-colors">Asia-Pacific Aircraft Ferry</button></li>
               <li><a href={SITES.concierge} className="hover:text-white transition-colors">Chauffeur &amp; Day Tours</a></li>
               <li><a href={SITES.aviation} className="hover:text-white transition-colors">On-Demand Jet Charter</a></li>
             </ul>
@@ -106,7 +106,7 @@ export const Footer: React.FC<FooterProps> = ({ goDivision, onOpenEnquiry }) => 
             <div className="space-y-2 text-xs">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
-                <span>Reykjavík Airport (BIRK) & Keflavík FBO (BIKF), Iceland</span>
+                <span>NAIA (RPLL) &amp; Clark FBO (RPLC), Philippines</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />

@@ -130,15 +130,15 @@ export const ArchitectureBlueprintView: React.FC = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
-                      AWD Iceland-Engineered Fleet Specs
+                      AWD Philippine-Engineered Fleet Specs
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
-                      Private Day Tours (Golden Circle, etc.)
+                      Private Day Tours (Tagaytay, El Nido, Bohol)
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
-                      Airside KEF/BIRK Tarmac Escort
+                      Airside NAIA/Clark Tarmac Escort
                     </li>
                   </ul>
                 </div>
@@ -150,7 +150,7 @@ export const ArchitectureBlueprintView: React.FC = () => {
                   </span>
                   <h3 className="font-serif-luxury text-xl text-white">Vela Aviation Rebuild</h3>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    Specialized private jet charters, transatlantic aircraft ferry flights, and oceanic flight dispatch operations.
+                    Specialized private jet charters, Asia-Pacific aircraft ferry flights, and oceanic flight dispatch operations.
                   </p>
                   <ul className="text-xs space-y-1.5 text-slate-300">
                     <li className="flex items-center gap-2">
@@ -159,7 +159,7 @@ export const ArchitectureBlueprintView: React.FC = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
-                      Transatlantic Oceanic Ferry Logistics
+                      Asia-Pacific Ferry Logistics
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
@@ -197,7 +197,7 @@ export const ArchitectureBlueprintView: React.FC = () => {
                 <Sparkles className="w-5 h-5 text-[#C5A880]" />
                 <h4 className="font-semibold text-white text-sm">Multi-Currency Transparent Engine</h4>
                 <p className="text-xs text-slate-400">
-                  Live conversion between USD ($), EUR (€), GBP (£), and ISK (kr) with VAT and airport fees transparently itemized.
+                  Live conversion between USD ($), EUR (€), GBP (£), and PHP (₱) with VAT and airport fees transparently itemized.
                 </p>
               </div>
             </div>
@@ -218,25 +218,25 @@ export const ArchitectureBlueprintView: React.FC = () => {
                 {[
                   {
                     step: 'Step 1: Service Categorization',
-                    desc: 'User chooses between Airport Transfer (KEF/RKV), Hourly/Daily Chauffeur Hire, Bespoke Day Tour (Golden Circle, South Coast), or Tarmac VIP Private Jet Escort.',
+                    desc: 'User chooses between Airport Transfer (NAIA/Clark), Hourly/Daily Chauffeur Hire, Bespoke Day Tour (Tagaytay, El Nido, Bohol), or Tarmac VIP Private Jet Escort.',
                     state: 'serviceType: "airport_transfer" | "hourly_hire" | "day_tour" | "tarmac_vip"',
                     validation: 'Mandatory single selection; auto-configures default pick-up parameters.'
                   },
                   {
                     step: 'Step 2: Route, Schedule & ADS-B Tracking',
-                    desc: 'Captures Date, Time, Pickup Address, Dropoff Destination, and Inbound Flight Number (FI / Private Tail) with automatic flight delay compensation.',
+                    desc: 'Captures Date, Time, Pickup Address, Dropoff Destination, and Inbound Flight Number (PR / Private Tail) with automatic flight delay compensation.',
                     state: 'pickupAddress, dropoffAddress, date, time, flightNumber, hoursNeeded, passengers, luggageCount',
                     validation: 'Enforces minimum date (today onwards), passenger ceiling warning vs vehicle capacity.'
                   },
                   {
                     step: 'Step 3: Fleet Vehicle Selection',
-                    desc: 'Presents Mercedes S-Class, V-Class VIP, Range Rover Autobiography, Sprinter Lounge, or Arctic Super Jeep with 360-specs and live converted pricing.',
+                    desc: 'Presents Mercedes S-Class, V-Class VIP, Range Rover Autobiography, GLE, or highland Range Rover with 360-specs and live converted pricing.',
                     state: 'vehicleId: string (mapped to GROUND_FLEET array)',
                     validation: 'Dynamic capacity check: flags passenger/luggage overload with visual recommendations.'
                   },
                   {
                     step: 'Step 4: Bespoke VIP Add-Ons',
-                    desc: 'Enables selection of VIP Tarmac Escort, Veuve Clicquot Champagne, ISOFIX Child Seats, Dedicated Luggage Van, or Multilingual Historian/Geologist Guide.',
+                    desc: 'Enables selection of VIP Tarmac Escort, Veuve Clicquot Champagne, ISOFIX Child Seats, Dedicated Luggage Van, or Multilingual Historian/Cultural Guide.',
                     state: 'selectedAddons: string[], specialRequests: string',
                     validation: 'Multi-select toggle with real-time recalculation of total cost.'
                   },
@@ -347,13 +347,13 @@ export const ArchitectureBlueprintView: React.FC = () => {
               {/* Color Swatches */}
               <div className="space-y-3">
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-[#C5A880]">
-                  Color Palette (Dark Luxury / Basalt &amp; Gold)
+                  Color Palette (Dark Luxury / Obsidian &amp; Gold)
                 </h3>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   <div className="p-4 rounded-xl border border-white/10 space-y-2" style={{ backgroundColor: '#080B0E' }}>
                     <div className="text-xs font-bold text-white">#080B0E</div>
-                    <div className="text-[10px] text-slate-400">Icelandic Basalt Canvas</div>
+                    <div className="text-[10px] text-slate-400">Obsidian Night Canvas</div>
                   </div>
 
                   <div className="p-4 rounded-xl border border-white/10 space-y-2" style={{ backgroundColor: '#C5A880' }}>
@@ -418,15 +418,15 @@ export const ArchitectureBlueprintView: React.FC = () => {
                   <pre className="text-slate-300 overflow-x-auto p-2 bg-[#080B0E] rounded text-[11px]">
 {`{
   "serviceType": "airport_transfer",
-  "flightNumber": "FI451",
-  "originAirportIcao": "BIKF",
+  "flightNumber": "PR101",
+  "originAirportIcao": "RPLL",
   "pickupDateTime": "2026-08-26T14:30:00Z",
-  "dropoffCoordinates": { "lat": 64.1508, "lng": -21.9333 },
+  "dropoffCoordinates": { "lat": 14.5547, "lng": 121.0244 },
   "vehicleId": "mb-s-class",
   "guest": {
     "name": "Lord Alexander Sterling",
     "email": "vip@domain.com",
-    "phone": "+3545885522"
+    "phone": "+639171234567"
   },
   "addons": ["tarmac-vip", "champagne-glacier"],
   "currency": "USD",
@@ -443,9 +443,9 @@ export const ArchitectureBlueprintView: React.FC = () => {
                   <pre className="text-slate-300 overflow-x-auto p-2 bg-[#080B0E] rounded text-[11px]">
 {`{
   "missionType": "ferry_delivery",
-  "originIcao": "KTEB",
-  "destinationIcao": "EGLF",
-  "intermediateStops": ["CYYR", "BGBW", "BIRK"],
+  "originIcao": "RJTT",
+  "destinationIcao": "WSSS",
+  "intermediateStops": ["RCTP", "RPLL"],
   "aircraftClass": "gulfstream-g650er",
   "oceanicRequirements": {
     "dualFerryCrew": true,

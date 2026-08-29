@@ -47,11 +47,11 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
 
   const [bookingState, setBookingState] = useState<GroundBookingState>({
     serviceType: (initialOptions?.serviceType as any) || 'airport_transfer',
-    originAirport: 'KEF',
-    pickupAddress: 'Keflavík International Airport (KEF) FBO / VIP Terminal',
-    dropoffAddress: 'The Reykjavik EDITION Hotel, Austurbakki 2, 101 Reykjavík',
+    originAirport: 'MNL',
+    pickupAddress: 'Ninoy Aquino International Airport (NAIA / MNL) FBO / VIP Terminal',
+    dropoffAddress: 'Makati CBD / Hotel',
     selectedTourId: initialOptions?.tourId || 'golden-circle-luxury',
-    flightNumber: 'FI 451 / Private Jet',
+    flightNumber: 'PR 101 / Private Jet',
     date: today,
     time: '14:30',
     hoursNeeded: 4,
@@ -214,8 +214,8 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                   setBookingState(prev => ({
                     ...prev,
                     serviceType: 'airport_transfer',
-                    pickupAddress: 'Keflavík International Airport (KEF)',
-                    dropoffAddress: 'Reykjavík City Center / Hotel'
+                    pickupAddress: 'Ninoy Aquino International Airport (NAIA / MNL)',
+                    dropoffAddress: 'Makati CBD / Hotel'
                   }));
                 }}
                 className={`p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
@@ -231,9 +231,9 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                       Most Booked
                     </span>
                   </div>
-                  <h4 className="text-base font-semibold text-white">Keflavík &amp; City Airport Transfer</h4>
+                  <h4 className="text-base font-semibold text-white">NAIA &amp; Clark Airport Transfer</h4>
                   <p className="text-xs text-slate-400">
-                    Direct door-to-door transfer between KEF/RKV airports and Reykjavík, Blue Lagoon, or remote lodges. Live flight monitoring included.
+                    Direct door-to-door transfer between NAIA/Clark airports and Makati, BGC, or Tagaytay. Live flight monitoring included.
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs">
@@ -281,7 +281,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                   setBookingState(prev => ({
                     ...prev,
                     serviceType: 'day_tour',
-                    selectedTourId: 'golden-circle-luxury'
+                    selectedTourId: 'tagaytay-taal-luxury'
                   }));
                 }}
                 className={`p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
@@ -297,9 +297,9 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                       Private Signature Tours
                     </span>
                   </div>
-                  <h4 className="text-base font-semibold text-white">Private Icelandic Day Tours</h4>
+                  <h4 className="text-base font-semibold text-white">Private Philippine Day Tours</h4>
                   <p className="text-xs text-slate-400">
-                    Golden Circle, South Coast Waterfalls, Snæfellsnes, Glacier Super Jeep expeditions, and Northern Lights hunts with expert guides.
+                    Tagaytay &amp; Taal, El Nido, Bohol Chocolate Hills, Banaue rice terraces, and Intramuros heritage with expert guides.
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs">
@@ -314,7 +314,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                   setBookingState(prev => ({
                     ...prev,
                     serviceType: 'tarmac_vip',
-                    pickupAddress: 'KEF Airport Private Jet FBO Ramp / Aircraft Steps'
+                    pickupAddress: 'NAIA Private Jet FBO Ramp / Aircraft Steps'
                   }));
                 }}
                 className={`p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
@@ -405,7 +405,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                   type="text"
                   value={bookingState.pickupAddress}
                   onChange={(e) => setBookingState({ ...bookingState, pickupAddress: e.target.value })}
-                  placeholder="e.g., Keflavík Airport (KEF) or Hotel Address"
+                  placeholder="e.g., NAIA (MNL) or Hotel Address"
                   className="w-full bg-[#141A24] border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#C5A880]"
                 />
               </div>
@@ -419,7 +419,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                   type="text"
                   value={bookingState.dropoffAddress}
                   onChange={(e) => setBookingState({ ...bookingState, dropoffAddress: e.target.value })}
-                  placeholder="e.g., The Retreat at Blue Lagoon / Edition Hotel"
+                  placeholder="e.g., Raffles Makati / Shangri-La Boracay"
                   className="w-full bg-[#141A24] border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#C5A880]"
                 />
               </div>
@@ -462,7 +462,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                     type="text"
                     value={bookingState.flightNumber}
                     onChange={(e) => setBookingState({ ...bookingState, flightNumber: e.target.value })}
-                    placeholder="e.g. FI 451, BA 894, or N650GA (Tail #)"
+                    placeholder="e.g. PR 101, SQ 918, or N650GA (Tail #)"
                     className="w-full bg-[#141A24] border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#C5A880]"
                   />
                   <span className="text-[10px] text-slate-500 block">We monitor ADS-B live flight feeds at zero extra cost.</span>
@@ -547,7 +547,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
             <div>
               <h3 className="font-serif-luxury text-2xl text-white">Select Fleet Vehicle</h3>
               <p className="text-xs text-slate-400 mt-1">
-                All vehicles feature all-wheel drive, premium leather interiors, high-speed Wi-Fi, and Icelandic glacier water.
+                All vehicles feature all-wheel drive, premium leather interiors, high-speed Wi-Fi, and still water.
               </p>
             </div>
 
@@ -721,7 +721,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                 rows={2}
                 value={bookingState.specialRequests}
                 onChange={(e) => setBookingState({ ...bookingState, specialRequests: e.target.value })}
-                placeholder="e.g., Inflight connection details, skis/golf clubs, specific beverage preferences, confidential security protocol..."
+                placeholder="e.g., Inflight connection details, diving gear/golf clubs, specific beverage preferences, confidential security protocol..."
                 className="w-full bg-[#141A24] border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#C5A880]"
               />
             </div>
@@ -894,7 +894,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
                       <span>{formatPrice(totalUSD - bookingState.selectedAddons.reduce((s, id) => s + (BOOKING_ADDONS.find(a => a.id === id)?.priceUSD || 0), 0))}</span>
                     </div>
                     <div className="flex justify-between text-xs text-slate-400">
-                      <span>Icelandic VAT (11%) &amp; Road Tolls:</span>
+                      <span>Philippine VAT (12%) &amp; Tolls:</span>
                       <span className="text-[#C5A880]">Included</span>
                     </div>
                     <div className="flex justify-between text-xs text-slate-400">

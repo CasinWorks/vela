@@ -80,7 +80,7 @@ END:VCALENDAR`;
             RESERVATION CONFIRMED &amp; DISPATCHED
           </span>
           <h2 className="font-serif-luxury text-2xl sm:text-3xl text-white">
-            Your Icelandic Chauffeur is Reserved
+            Your Philippine Chauffeur is Reserved
           </h2>
           <div className="inline-block bg-black/60 border border-[#C5A880]/30 rounded-lg px-4 py-1 mt-2">
             <span className="text-xs text-slate-400 font-mono">Reference Code: </span>

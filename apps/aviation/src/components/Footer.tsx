@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbout }) => {
           <div className="space-y-4">
             <span className="font-serif-luxury text-3xl tracking-[0.16em] text-white">VELA AVIATION</span>
             <p className="text-xs max-w-sm leading-relaxed text-slate-500">
-              Aircraft delivery, demo flights and ferry service worldwide.
+              Aircraft delivery, demo flights and ferry service from Manila, worldwide.
             </p>
           </div>
           <div className="flex flex-wrap gap-x-8 gap-y-3 text-xs">
@@ -40,7 +40,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbout }) => {
         </div>
         <DemoFooterLinks />
         <div className="mt-8 pt-6 border-t border-white/8 text-[10px] tracking-[0.2em] uppercase text-slate-600">
-          © {new Date().getFullYear()} Vela Aviation · Worldwide operations
+          © {new Date().getFullYear()} Vela Aviation · Manila · Worldwide operations
         </div>
       </div>
     </footer>

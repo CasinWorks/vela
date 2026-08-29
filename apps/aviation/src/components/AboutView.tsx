@@ -38,7 +38,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onBackHome, onContact }) =
             className="font-serif-luxury text-4xl sm:text-5xl md:text-6xl text-white leading-[1.08]"
           >
             Aircraft delivery.<br />
-            <span className="text-[#C5A880] font-light">Worldwide ferry.</span>
+            <span className="text-[#C5A880] font-light">Manila-based ferry.</span>
           </motion.h1>
         </motion.div>
 
@@ -47,10 +47,10 @@ export const AboutView: React.FC<AboutViewProps> = ({ onBackHome, onContact }) =
           className="max-w-3xl space-y-6 text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-16"
         >
           <p>
-            Vela Aviation is a specialist aviation house for aircraft
-            delivery, demo flights, and ferry service worldwide. From crew dispatch to oceanic
-            planning and permits, we arrange the full mission so operators can move Boeing and
-            Airbus aircraft with confidence.
+            Vela Aviation is a Manila-based specialist aviation house for aircraft
+            delivery, demo flights, and ferry service across Asia-Pacific and worldwide. From crew
+            dispatch to oceanic planning and permits, we arrange the full mission so operators can
+            move Boeing and Airbus aircraft with confidence.
           </p>
           <p>
             Whether you need crew-only support, a complete ferry package, or consulting on lease and
@@ -77,7 +77,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onBackHome, onContact }) =
             {
               icon: Globe2,
               title: 'Global reach',
-              body: 'Oceanic planning, permits, and consulting for missions across borders.',
+              body: 'Oceanic planning, permits, and consulting for missions across Asia-Pacific and beyond.',
             },
           ].map((item) => (
             <div key={item.title} className="space-y-3">

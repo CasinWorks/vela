@@ -22,10 +22,10 @@ const STOCK = {
   aviationCard: stock('photo-1684838200815-36eef38f353c', 1600),
   conciergeCard: stock('photo-1563458563737-e60b1f1b345f', 1600),
   chauffeur: stock('photo-1583918003285-199304164a2f', 1200),
-  iceland: stock('photo-1768078557772-79741862c07d', 1200),
+  philippines: stock('photo-1749995925383-5195d00a6811', 1200),
   aviationJourney: stock('photo-1540962351504-03099e0a754b', 1200),
   vipArrival: stock('photo-1693835195915-b30cc5ae885c', 1200),
-  cta: stock('photo-1635783651424-c7a21cd71549', 2400),
+  cta: stock('photo-1757258631937-5dfdd0dae3a8', 2400),
 };
 
 interface ParentPortalViewProps {
@@ -96,11 +96,11 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               </button>
 
               <button
-                id="hero-btn-experience-iceland"
+                id="hero-btn-experience-philippines"
                 onClick={goLimousine}
                 className="inline-flex items-center gap-2.5 bg-black/40 hover:bg-black/70 text-white border border-white/40 hover:border-white font-semibold text-xs tracking-[0.18em] uppercase px-6 sm:px-7 py-3.5 rounded-none backdrop-blur-sm transition-all duration-200 cursor-pointer"
               >
-                <span>EXPERIENCE ICELAND</span>
+                <span>EXPERIENCE THE PHILIPPINES</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </motion.div>
@@ -119,7 +119,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               { icon: Globe, title: 'Worldwide Operations', body: 'Aviation services and luxury travel, wherever you need us.' },
               { icon: User, title: 'Personal Service', body: 'A dedicated team, available 24/7 to support your journey.' },
               { icon: Gem, title: 'Discretion & Trust', body: 'Your privacy is our priority. Always.' },
-              { icon: Mountain, title: 'Iceland Experts', body: 'Local knowledge and access to extraordinary experiences.' },
+              { icon: Mountain, title: 'Philippines Experts', body: 'Local knowledge and access to extraordinary experiences.' },
             ].map((pillar) => (
               <motion.div
                 key={pillar.title}
@@ -153,7 +153,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               From runway to road.
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed max-w-xl mx-auto">
-              Whether you arrive by private jet or explore Iceland from the ground, our team is here to deliver a seamless journey, start to finish.
+              Whether you arrive by private jet or explore the Philippines from the ground, our team is here to deliver a seamless journey, start to finish.
             </p>
           </motion.div>
 
@@ -235,7 +235,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
                     LUXURY TRANSPORTATION
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-2">
-                    Private chauffeur, airport transfers and tailor-made experiences across Iceland.
+                    Private chauffeur, airport transfers and tailor-made experiences across the Philippines.
                   </p>
                 </div>
 
@@ -297,7 +297,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               </div>
             </div>
 
-            {/* Card 2: BESPOKE ICELAND */}
+            {/* Card 2: BESPOKE PHILIPPINES */}
             <div 
               onClick={goLimousine}
               className="group cursor-pointer flex flex-col space-y-0"
@@ -305,8 +305,8 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               <div className="aspect-[16/10] w-full overflow-visible relative bg-[#0D1219]">
                 <div className="w-full h-full overflow-hidden">
                   <img 
-                    src={STOCK.iceland} 
-                    alt="Icebergs at Jökulsárlón glacier lagoon, Iceland"
+                    src={STOCK.philippines} 
+                    alt="El Nido limestone lagoons, Palawan"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -318,7 +318,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
 
               <div className="flex flex-col items-center text-center space-y-2 pt-8 sm:pt-9 px-2">
                 <h3 className="font-serif-luxury text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold text-white">
-                  BESPOKE ICELAND
+                  BESPOKE PHILIPPINES
                 </h3>
                 <p className="text-[11px] sm:text-xs text-slate-400 leading-relaxed max-w-[240px]">
                   Tell us what you want to see. We'll create the perfect journey.
@@ -390,11 +390,11 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
 
       {/* 5. BOTTOM CALL-TO-ACTION (Exact 1:1 Match to Mockup) */}
       <section className="relative py-28 overflow-hidden">
-        {/* Dark Icelandic Horizon Background Image */}
+        {/* Dark Philippine coastline background */}
         <div className="absolute inset-0 z-0">
           <img 
             src={STOCK.cta} 
-            alt="Sea cliffs in Vestmannaeyjar, Iceland"
+            alt="El Nido coastline, Palawan"
             className="w-full h-full object-cover brightness-60 contrast-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B0E] via-[#080B0E]/60 to-[#080B0E]" />

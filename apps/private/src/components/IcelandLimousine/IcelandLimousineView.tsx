@@ -76,12 +76,12 @@ export const IcelandLimousineView: React.FC<IcelandLimousineViewProps> = ({
             </div>
 
             <h1 className="font-serif-luxury text-4xl sm:text-6xl font-normal text-white leading-tight">
-              Reykjavík Chauffeurs &amp; <br />
-              <span className="italic font-light text-slate-100">Bespoke Icelandic Tours</span>
+              Manila Chauffeurs &amp; <br />
+              <span className="italic font-light text-slate-100">Bespoke Philippine Tours</span>
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg font-light max-w-xl leading-relaxed">
-              Experience the untamed majesty of Iceland in total luxury. Discreet VIP airport transfers, executive fleet hire, and private custom itineraries tailored to your schedule.
+              Experience the islands of the Philippines in total luxury. Discreet VIP airport transfers, executive fleet hire, and private custom itineraries tailored to your schedule.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -114,7 +114,7 @@ export const IcelandLimousineView: React.FC<IcelandLimousineViewProps> = ({
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle className="w-4 h-4 text-[#C5A880]" />
-                KEF FBO Airside Access
+                NAIA FBO Airside Access
               </span>
             </div>
 
@@ -143,10 +143,10 @@ export const IcelandLimousineView: React.FC<IcelandLimousineViewProps> = ({
                 OUR LUXURY FLEET
               </span>
               <h2 className="font-serif-luxury text-3xl sm:text-4xl text-white">
-                Engineered for Icelandic Terrains
+                Engineered for Philippine Terrains
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Every vehicle in our fleet is all-wheel drive, maintained to factory safety standards, and equipped with luxury amenities for Arctic travel.
+                Every vehicle in our fleet is all-wheel drive, maintained to factory safety standards, and equipped with luxury amenities for monsoon and mountain travel.
               </p>
             </div>
 
@@ -248,7 +248,7 @@ export const IcelandLimousineView: React.FC<IcelandLimousineViewProps> = ({
               Private Signature Day Tours
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              No tourist crowds, no rigid schedules. Roam glaciers, volcanic waterfalls, and geothermal lagoons on your own terms.
+              No tourist crowds, no rigid schedules. Roam limestone lagoons, rice terraces, and highland ridge roads on your own terms.
             </p>
           </div>
 
