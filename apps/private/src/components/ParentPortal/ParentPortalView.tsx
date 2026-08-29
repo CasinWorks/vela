@@ -3,14 +3,6 @@ import { motion } from 'motion/react';
 import { ActiveDivision } from '../../types';
 import { SITES } from '../../config/sites';
 import { fadeUp, heroReveal, staggerContainer, staggerItem, easeLuxury } from '../../lib/motion';
-import heroBgImage from '../../assets/hero-jet.jpg';
-import limousineCarImage from '../../assets/limousine-car.jpg';
-import aviationDivisionImage from '../../assets/aviation-division.jpg';
-import chauffeurImage from '../../assets/chauffeur.jpg';
-import bespokeIcelandImage from '../../assets/bespoke-iceland.jpg';
-import aviationJourneyImage from '../../assets/aviation-journey.jpg';
-import vipArrivalImage from '../../assets/vip-arrival.jpg';
-import bottomCtaBgImage from '../../assets/bottom-cta-bg.jpg';
 import { 
   ArrowRight, 
   Globe, 
@@ -21,6 +13,20 @@ import {
   MapPin, 
   Briefcase
 } from 'lucide-react';
+
+const stock = (id: string, w = 1800) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+const STOCK = {
+  hero: stock('photo-1569629743817-70d8db6c323b', 2400),
+  aviationCard: stock('photo-1474303333531-939da2e6ca31', 1600),
+  conciergeCard: stock('photo-1485291571150-772bcfc10da1', 1600),
+  chauffeur: stock('photo-1449965408869-eaa3f722f40d', 1200),
+  iceland: stock('photo-1504893524553-b855bce32c67', 1200),
+  aviationJourney: stock('photo-1436491865332-7a61a109cc05', 1200),
+  vipArrival: stock('photo-1529074963764-98f45c47344b', 1200),
+  cta: stock('photo-1507272931001-fc06c17e4f43', 2400),
+};
 
 interface ParentPortalViewProps {
   setActiveDivision: (division: ActiveDivision) => void;
@@ -50,7 +56,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
           transition={{ duration: 2.2, ease: easeLuxury }}
         >
           <img 
-            src={heroBgImage} 
+            src={STOCK.hero} 
             alt="Private Aviation & Luxury Travel Runway" 
             className="w-full h-full object-cover object-right md:object-center brightness-[0.80]"
           />
@@ -163,7 +169,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               <div className="relative h-64 sm:h-72 md:h-80 overflow-visible bg-slate-900">
                 <div className="w-full h-full overflow-hidden">
                   <img 
-                    src={aviationDivisionImage} 
+                    src={STOCK.aviationCard} 
                     alt="Vela Aviation Private Aviation"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -208,7 +214,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               <div className="relative h-64 sm:h-72 md:h-80 overflow-visible bg-slate-900">
                 <div className="w-full h-full overflow-hidden">
                   <img 
-                    src={limousineCarImage} 
+                    src={STOCK.conciergeCard} 
                     alt="Vela Concierge Luxury Fleet on Road"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -270,7 +276,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               <div className="aspect-[16/10] w-full overflow-visible relative bg-[#0D1219]">
                 <div className="w-full h-full overflow-hidden">
                   <img 
-                    src={chauffeurImage} 
+                    src={STOCK.chauffeur} 
                     alt="Private Chauffeur Luxury Interior"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -299,7 +305,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               <div className="aspect-[16/10] w-full overflow-visible relative bg-[#0D1219]">
                 <div className="w-full h-full overflow-hidden">
                   <img 
-                    src={bespokeIcelandImage} 
+                    src={STOCK.iceland} 
                     alt="Bespoke Iceland Glacier Lagoon"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -328,7 +334,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               <div className="aspect-[16/10] w-full overflow-visible relative bg-[#0D1219]">
                 <div className="w-full h-full overflow-hidden">
                   <img 
-                    src={aviationJourneyImage} 
+                    src={STOCK.aviationJourney} 
                     alt="Private Jet Aviation Services"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -357,7 +363,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
               <div className="aspect-[16/10] w-full overflow-visible relative bg-[#0D1219]">
                 <div className="w-full h-full overflow-hidden">
                   <img 
-                    src={vipArrivalImage} 
+                    src={STOCK.vipArrival} 
                     alt="VIP Arrival Lounge Terminal"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -387,7 +393,7 @@ export const ParentPortalView: React.FC<ParentPortalViewProps> = ({
         {/* Dark Icelandic Horizon Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={bottomCtaBgImage} 
+            src={STOCK.cta} 
             alt="Atmospheric Journey Horizon"
             className="w-full h-full object-cover brightness-60 contrast-110"
           />

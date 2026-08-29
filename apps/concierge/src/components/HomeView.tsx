@@ -12,7 +12,7 @@ import {
   PlaneLanding,
   MapPin,
 } from 'lucide-react';
-import { GROUND_FLEET, ICELAND_TOURS, AIRPORT_TRANSFER, formatMoney } from '../data/fleet';
+import { GROUND_FLEET, ICELAND_TOURS, AIRPORT_TRANSFER, formatMoney, STOCK } from '../data/fleet';
 import { EcosystemBand } from './EcosystemBand';
 import { fadeUp, easeLuxury, staggerContainer, heroReveal } from '../lib/motion';
 
@@ -21,7 +21,7 @@ interface HomeViewProps {
   onOpenEnquiry: (topic?: string) => void;
 }
 
-const HERO_IMG = '/fleet/volvo-xc90.jpg';
+const HERO_IMG = STOCK.hero;
 
 export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry }) => {
   const scrollToFleet = () => {
@@ -363,7 +363,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onOpenBooking, onOpenEnquiry
       <section className="relative py-28 px-0 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/tours/golden-circle.jpg"
+            src={STOCK.cta}
             alt="Iceland landscape"
             className="w-full h-full object-cover brightness-50"
           />
