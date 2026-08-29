@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ActiveDivision } from '../types';
+import { SITES } from '../config/sites';
 import { SiteNavLinks, SIBLING_NAV } from './SiteNavLinks';
 import { MenuToggle, MobileNavItem, MobileNavMenu } from './MobileNavMenu';
 
@@ -74,10 +75,22 @@ export const Navigation: React.FC<NavigationProps> = ({
         }`}
       >
         <div className="site-shell flex items-center justify-between">
-          <button
+          <a
             id="brand-logo-button"
-            type="button"
-            onClick={goPortal}
+            href={SITES.parent}
+            onClick={(e) => {
+              setMobileMenuOpen(false);
+              try {
+                const target = new URL(SITES.parent, window.location.href);
+                if (target.origin === window.location.origin) {
+                  e.preventDefault();
+                  goPortal();
+                }
+              } catch {
+                e.preventDefault();
+                goPortal();
+              }
+            }}
             className="text-left group flex items-center space-x-3.5 sm:space-x-4 cursor-pointer focus:outline-none"
           >
             <div className="flex flex-col">
@@ -94,7 +107,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 PRIVATE AVIATION &amp; LUXURY TRAVEL
               </span>
             </div>
-          </button>
+          </a>
 
           <nav className="hidden md:flex items-center space-x-6 xl:space-x-8 text-xs tracking-[0.22em] font-medium text-slate-300 uppercase">
             <SiteNavLinks variant="nav" />
